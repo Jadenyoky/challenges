@@ -15,7 +15,8 @@
   box-sizing: border-box;
 }
 
-body {}
+body {
+}
 
 .main {
   height: 100svh;
@@ -44,7 +45,7 @@ body {}
     font-family: "rafah";
     color: white;
 
-    >span {
+    > span {
       color: #72fa93;
       font-style: italic;
       text-shadow: 0px 0px 20px #000000;
@@ -70,13 +71,13 @@ body {}
     align-items: center;
     overflow: hidden;
 
-    >* {
+    > * {
       transition: all 0.5s;
       opacity: 0;
       transform: scale(0.5) translateX(-100%);
     }
 
-    >span {
+    > span {
       position: absolute;
       top: 10px;
       left: 20px;
@@ -87,7 +88,7 @@ body {}
       font-weight: bold;
     }
 
-    >p {
+    > p {
       position: absolute;
       left: 20px;
       bottom: 20px;
@@ -98,7 +99,7 @@ body {}
       font-weight: 500;
     }
 
-    >div {
+    > div {
       position: absolute;
       top: 0;
       background-color: rgba(0, 0, 0, 0.502);
@@ -107,9 +108,10 @@ body {}
       z-index: 1;
     }
 
-    >img {
+    > img {
       opacity: 1;
       transform: scale(1) translateX(0);
+      aspect-ratio: 3 / 2;
     }
   }
 }
@@ -117,12 +119,12 @@ body {}
 .content {
   .challenge {
     &:hover {
-      >* {
+      > * {
         opacity: 1;
         transform: scale(1) translateX(0);
       }
 
-      >img {
+      > img {
         transform: scale(1.5);
       }
     }
@@ -146,20 +148,19 @@ body {}
 
   z-index: 10;
 
-  >i {
+  > i {
     margin: 8px 0 0 -8px;
     font-size: 4rem;
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.286);
     border-radius: 50px;
     z-index: -1;
-
   }
 
   &:hover {
@@ -167,10 +168,9 @@ body {}
 
     &::before {
       background-color: rgba(0, 0, 0, 0.715);
-
     }
 
-    >i {
+    > i {
       color: #72fa93;
     }
   }
