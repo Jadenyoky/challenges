@@ -1,0 +1,434 @@
+@font-face {
+  font-family: "sans medium";
+  src: url(../../assets/fonts/bento-grid/DMSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "sans italic";
+  src: url(../../assets/fonts/bento-grid/DMSans-MediumItalic.ttf);
+}
+
+@font-face {
+  font-family: "sans regular";
+  src: url(../../assets/fonts/bento-grid/DMSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "sans italic var";
+  src: url(../../assets/fonts/bento-grid/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+
+}
+
+@font-face {
+  font-family: "sans italic var 2";
+  src: url(../../assets/fonts/bento-grid/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+  gap: 10px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  grid-template-areas:
+    "one one one two two two two two two three three three"
+    "one one one two two two two two two three three three"
+    "one one one two two two two two two three three three"
+    "one one one two two two two two two three three three"
+    "one one one two two two two two two three three three"
+
+    "one one one five five five six six six three three three"
+
+    "four four four five five five six six six three three three"
+    "four four four five five five six six six three three three"
+
+    "four four four five five five six six six three three three"
+
+    "four four four seven seven seven eight eight eight eight eight eight"
+    "four four four seven seven seven eight eight eight eight eight eight"
+    "four four four seven seven seven eight eight eight eight eight eight"
+
+
+  ;
+
+  .card {
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .card_1 {
+    order: 7;
+
+    grid-area: one;
+    background-color: #faeee2;
+    color: #221f1a;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 1;
+    gap: 10px;
+
+    >.text_1 {
+      letter-spacing: -2px;
+      font-weight: 500;
+      font-family: 'sans italic var 2';
+      font-size: 2.5rem;
+
+      >.plus {
+        color: #7f5fca;
+        font-family: 'sans italic var';
+      }
+    }
+
+    .image1 {
+      width: 200px;
+      max-width: 100%;
+    }
+  }
+
+  .card_2 {
+    order: 1;
+
+    grid-area: two;
+    background-color: #7651dc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'sans regular';
+
+    >.text_1 {
+      font: 3rem 'sans regular';
+      text-align: center;
+      line-height: 1;
+      letter-spacing: -2px;
+
+
+      >.plus {
+        color: #fecc77;
+      }
+    }
+
+
+
+    .text_2 {
+      color: #d2c2ee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 20px;
+
+      >.image1 {
+        width: 200px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .card_3 {
+    order: 4;
+
+    grid-area: three;
+    background-color: #dcd1fc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+
+    color: #221f1a;
+
+    >.text_1 {
+      font: 2rem 'sans regular';
+      letter-spacing: -1px;
+      line-height: 0.9;
+
+    }
+
+    >.image {
+
+      width: 300px;
+      height: 270px;
+      transform: translateX(70px);
+
+      .image1 {
+        width: 100%;
+
+      }
+    }
+
+    >.text_2 {
+      font: 1rem 'sans regular';
+    }
+  }
+
+  .card_4 {
+    order: 8;
+
+    grid-area: four;
+    background-color: #ffcc69;
+    color: #221f1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+
+    >.text_1 {
+      letter-spacing: -2px;
+      font-size: 2rem;
+      font-family: 'sans italic var 2';
+      line-height: 0.9;
+    }
+
+    >.image1 {
+      width: 220px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .card_5 {
+    order: 2;
+
+    grid-area: five;
+    background-color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+    color: #221f1a;
+
+    >.text_1 {
+      letter-spacing: -1px;
+      font-size: 1.7rem;
+      font-family: 'sans italic var 2';
+      line-height: 0.9;
+    }
+
+    >.image {
+      transform: translateX(50px);
+      right: -70px;
+
+      width: 250px;
+
+      .image1 {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .card_6 {
+    order: 3;
+
+    grid-area: six;
+    background-color: #ffcc69;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+
+    >.text_1 {
+      letter-spacing: -1px;
+      font-size: 2rem;
+      font-family: 'sans italic var 2';
+      line-height: 0.9;
+      color: #221f1a;
+    }
+
+    >.image1 {
+      align-self: center;
+      max-width: 90%;
+    }
+  }
+
+  .card_7 {
+    order: 6;
+
+    grid-area: seven;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    justify-content: center;
+
+    >.text_1 {
+      font-size: 1rem;
+      letter-spacing: -1px;
+      font-family: 'sans italic var 2';
+      line-height: 0.9;
+      color: #221f1a;
+      text-wrap: nowrap;
+
+      >.plus {
+        font-size: 3rem;
+        color: #221f1a;
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+    }
+
+    >.image1 {
+      align-self: center;
+      width: 150px;
+    }
+  }
+
+  .card_8 {
+    order: 5;
+
+    grid-area: eight;
+    background-color: #7651dc;
+
+    display: flex;
+
+    overflow: hidden;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    >.text_1 {
+      color: #ffffff;
+      font-size: 2rem;
+      letter-spacing: -1px;
+      font-family: 'sans italic var 2';
+      line-height: 0.9;
+    }
+
+    >.image1 {
+      width: 150px;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+
+    .card {
+      flex: auto;
+    }
+
+    .card_1 {
+      align-items: center;
+      font-size: 2rem;
+      gap: 30px;
+    }
+
+    .card_2 {
+      gap: 30px;
+
+      >.text_1 {
+        font-size: 2rem;
+      }
+
+      >.text_2 {
+        font-size: 1rem;
+
+        >.image1 {
+          width: 170px;
+          max-width: 100%;
+
+        }
+      }
+    }
+
+    .card_3 {
+
+      >.text_1 {
+        font-size: 1.5rem;
+
+      }
+
+      >.image {
+        max-width: 70%;
+        height: auto;
+        transform: translateX(0);
+      }
+
+      >.text_2 {
+        font: 1rem 'sans regular';
+        text-align: center;
+      }
+    }
+
+
+    .card_4 {
+      >.text_1 {
+        font-size: 2rem;
+      }
+    }
+
+
+    .card_5 {
+      justify-content: center;
+      align-items: center;
+
+      >.text_1 {
+        letter-spacing: -1px;
+        font-size: 1.7rem;
+        font-family: 'sans italic var 2';
+        line-height: 0.9;
+        margin-top: 0;
+        align-self: baseline;
+      }
+
+      >.image {
+        transform: translateX(0);
+      }
+    }
+
+
+    .card_6 {
+      gap: 0;
+      overflow: hidden;
+
+      >.text_1 {
+        font-size: 2rem;
+      }
+
+      >.image1 {
+        transform: translateY(21px);
+        width: 250px;
+        max-width: 60%;
+        align-self: baseline;
+      }
+    }
+
+    .card_7 {
+      >.image1 {
+        width: 200px;
+      }
+    }
+
+    .card_8 {
+      flex-direction: column;
+
+      >.image1 {
+        width: 200px;
+      }
+    }
+
+  }
+}

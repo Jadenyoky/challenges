@@ -2,20 +2,184 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "~@flaticon/flaticon-uicons/css/all/all";
+
+@font-face {
+  font-family: "rafah";
+  src: url("../assets/fonts/rafah.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {}
+
+.main {
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 10px 1px #72fa93;
+  background-color: black;
+  border-radius: 0px 0 0px 24px;
+  z-index: 5;
+
+  .background {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/images/grid.jpg) no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+  }
+
+  .text-header {
+    font-size: 1.5rem;
+    font-family: "rafah";
+    color: white;
+
+    >span {
+      color: #72fa93;
+      font-style: italic;
+      text-shadow: 0px 0px 20px #000000;
+    }
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.content {
+  margin: 20px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  overflow: hidden;
+  gap: 2px;
+  border-radius: 20px;
+
+  .challenge {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    >* {
+      transition: all 0.5s;
+      opacity: 0;
+      transform: scale(0.5) translateX(-100%);
+    }
+
+    >span {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-family: "rafah";
+      font-size: 1.3rem;
+      z-index: 2;
+      color: white;
+      font-weight: bold;
+    }
+
+    >p {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      font-family: "rafah";
+      font-size: 1.3rem;
+      z-index: 2;
+      color: white;
+      font-weight: 500;
+    }
+
+    >div {
+      position: absolute;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.502);
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+
+    >img {
+      opacity: 1;
+      transform: scale(1) translateX(0);
+    }
+  }
+}
+
+.content {
+  .challenge {
+    &:hover {
+      >* {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+      }
+
+      >img {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.back {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 70px;
+  width: 70px;
+  background: url(../assets/images/grid.jpg) center center / cover;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 16px 0;
+
+  z-index: 10;
+
+  >i {
+    margin: 8px 0 0 -8px;
+    font-size: 4rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.286);
+    border-radius: 50px;
+    z-index: -1;
+
+  }
+
+  &:hover {
+    opacity: 1;
+
+    &::before {
+      background-color: rgba(0, 0, 0, 0.715);
+
+    }
+
+    >i {
+      color: #72fa93;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    .text-header {
+      font-size: 1.3rem;
+    }
+  }
 }
