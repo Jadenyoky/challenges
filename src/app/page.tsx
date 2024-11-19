@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { challenges } from "./challenges";
 import { moving, moving2, moving3, moving4, moving5 } from "./anime";
