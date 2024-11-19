@@ -1,11 +1,13 @@
+"use client";
 import pic1 from "../assets/challenges-images/bento-grid.jpg";
 import pic2 from "../assets/challenges-images/social-links.jpg";
 import pic3 from "../assets/challenges-images/12.jpg";
+import { StaticImageData } from "next/image";
 
 type Challenge = {
   name: string;
   link: string;
-  pic: any;
+  pic: StaticImageData;
 };
 
 export const challenges: Challenge[] = [

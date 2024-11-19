@@ -4,18 +4,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { challenges } from "./challenges";
 import { moving, moving2, moving3, moving4, moving5 } from "./anime";
-import { useState, useEffect } from "react";
-import _ from "lodash";
+// import _ from "lodash";
 
 const Page = () => {
-  const [arr, setarr] = useState(challenges);
-  const shuffling = () => {
-    setarr(_.shuffle(challenges));
-  };
+  // const [arr, setarr] = useState(challenges);
+  // const shuffling = () => {
+  //   setarr(_.shuffle(challenges));
+  // };
 
-  useEffect(() => {
-    shuffling();
-  }, []);
+  // useEffect(() => {
+  //   shuffling();
+  // }, []);
 
   return (
     <main
@@ -40,11 +39,11 @@ const Page = () => {
         animate="animate"
         className="content"
       >
-        {arr.map((challenge, index) => {
+        {challenges.map((challenge, index) => {
           return (
             <Link href={challenge.link} key={index}>
               <motion.div
-                key={arr[index].name}
+                key={challenges[index].name}
                 variants={moving5}
                 className={`challenge challenge${index + 1} `}
               >
