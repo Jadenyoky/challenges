@@ -1,5 +1,14 @@
 {
-  "rules": {
-    "@typescript-eslint/no-explicit-any": "off"
+  "extends": [
+    "next",
+    "next/core-web-vitals"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }
