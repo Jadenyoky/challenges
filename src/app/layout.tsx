@@ -1,18 +1,23 @@
-"use client";
 import "./globals.css";
-import Back from "./back";
-import { usePathname } from "next/navigation";
+import Prev from "./back";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Challenges",
+  description: "A collection of challenges by Jaden",
+  manifest: "/manifest/manifest.json",
+};
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
   return (
     <html lang="en">
+      <head></head>
       <body>
-        {pathname !== "/" && <Back />}
+        {/* {pathname !== "/" && <Prev />} */}
+        <Prev />
         {children}
       </body>
     </html>

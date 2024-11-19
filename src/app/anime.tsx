@@ -3,7 +3,7 @@ export const moving = {
     height: "100svh",
   },
   animate: {
-    height: "80px",
+    height: "70px",
     transition: {
       delay: 0.7,
       staggerChildren: 0.5,

@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 const Back = () => {
@@ -7,15 +7,21 @@ const Back = () => {
   const handleBack = () => {
     router.back();
   };
+  const pathname = usePathname();
+
   return (
-    <main
-      className="back"
-      onClick={() => {
-        handleBack();
-      }}
-    >
-      <i className="fi fi-rr-angle-small-left"></i>
-    </main>
+    <>
+      {pathname !== "/" && (
+        <main
+          className="back"
+          onClick={() => {
+            handleBack();
+          }}
+        >
+          <i className="fi fi-rr-angle-small-left"></i>
+        </main>
+      )}
+    </>
   );
 };
 
