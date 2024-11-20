@@ -3,11 +3,28 @@ import pic1 from "../assets/challenges-images/bento-grid.jpg";
 import pic2 from "../assets/challenges-images/social-links.jpg";
 import pic3 from "../assets/challenges-images/12.jpg";
 import { StaticImageData } from "next/image";
+import moment from "moment";
 
 type Challenge = {
   name: string;
   link: string;
   pic: StaticImageData;
+  date: string;
+  days: string;
+};
+
+const handleDate = (date: string) => {
+  return moment(date).format("MMM DD, YYYY");
+};
+
+const handleDays = (start: string, end: string) => {
+  const first = moment(start);
+  const final = moment(end);
+
+  const diffInDays = final.diff(first, "days");
+  const daysText =
+    diffInDays === 0 || diffInDays === 1 ? "1 day" : `${diffInDays} days`;
+  return daysText;
 };
 
 const challenges: Challenge[] = [
@@ -15,41 +32,15 @@ const challenges: Challenge[] = [
     name: "Bento Grid",
     link: "/bento-grid",
     pic: pic1,
+    date: handleDate("11/17/2024"),
+    days: handleDays("11/14/2024", "11/17/2024"),
   },
   {
     name: "Social Links",
     link: "/social-links",
     pic: pic2,
-  },
-  {
-    name: "Bento Grid",
-    link: "/bento-grid",
-    pic: pic3,
-  },
-  {
-    name: "Social Links",
-    link: "/social-links",
-    pic: pic2,
-  },
-  {
-    name: "Bento Grid",
-    link: "/bento-grid",
-    pic: pic1,
-  },
-  {
-    name: "Social Links",
-    link: "/social-links",
-    pic: pic2,
-  },
-  {
-    name: "Bento Grid",
-    link: "/bento-grid",
-    pic: pic3,
-  },
-  {
-    name: "Social Links",
-    link: "/social-links",
-    pic: pic3,
+    date: handleDate("11/18/2024"),
+    days: handleDays("11/19/2024", "11/19/2024"),
   },
 ];
 

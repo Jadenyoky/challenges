@@ -1,9 +1,9 @@
 export const moving = {
   initial: {
-    height: "100svh",
+    opacity: 0,
   },
   animate: {
-    height: "70px",
+    opacity: 1,
     transition: {
       delay: 0.7,
       staggerChildren: 0.5,
@@ -56,5 +56,19 @@ export const moving5 = {
   animate: {
     opacity: 1,
     y: 0,
+  },
+};
+
+export const moving6 = {
+  initial: {
+    opacity: 0,
+    x: -30,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 3,
+    },
   },
 };

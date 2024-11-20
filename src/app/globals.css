@@ -15,10 +15,20 @@
   box-sizing: border-box;
 }
 
-body {}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.all {
+  min-height: 100svh;
+  display: grid;
+  gap: 10px;
+  overflow-x: hidden;
+}
 
 .main {
-  height: 100svh;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,12 +58,11 @@ body {}
     justify-content: center;
     align-items: center;
 
-
-    >img {
+    > img {
       max-width: 50px;
     }
 
-    >span {
+    > span {
       color: #72fa93;
       font-style: italic;
       text-shadow: 0px 0px 20px #000000;
@@ -79,13 +88,13 @@ body {}
     align-items: center;
     overflow: hidden;
 
-    >* {
+    > * {
       transition: all 0.5s;
       opacity: 0;
       transform: scale(0.5) translateX(-100%);
     }
 
-    >span {
+    > span {
       position: absolute;
       top: 10px;
       left: 20px;
@@ -96,18 +105,37 @@ body {}
       font-weight: bold;
     }
 
-    >p {
+    > .name {
       position: absolute;
       left: 20px;
-      bottom: 20px;
+      bottom: 50px;
       font-family: "rafah";
       font-size: 1.3rem;
       z-index: 2;
       color: white;
-      font-weight: 500;
     }
 
-    >div {
+    > .date {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      font-family: "rafah";
+      font-size: 1rem;
+      z-index: 2;
+      color: #72fa93;
+    }
+
+    > .days {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      font-family: "rafah";
+      font-size: 1rem;
+      z-index: 2;
+      color: #72fa93;
+    }
+
+    > div {
       position: absolute;
       top: 0;
       background-color: rgba(0, 0, 0, 0.502);
@@ -116,7 +144,7 @@ body {}
       z-index: 1;
     }
 
-    >img {
+    > img {
       opacity: 1;
       transform: scale(1) translateX(0);
       aspect-ratio: 3 / 2;
@@ -127,12 +155,12 @@ body {}
 .content {
   .challenge {
     &:hover {
-      >* {
+      > * {
         opacity: 1;
         transform: scale(1) translateX(0);
       }
 
-      >img {
+      > img {
         transform: scale(1.5);
       }
     }
@@ -156,7 +184,7 @@ body {}
 
   z-index: 10;
 
-  >i {
+  > i {
     margin: 8px 0 0 -8px;
     font-size: 4rem;
   }
@@ -178,9 +206,63 @@ body {}
       background-color: rgba(0, 0, 0, 0.715);
     }
 
-    >i {
+    > i {
       color: #72fa93;
     }
+  }
+}
+
+.footer {
+  /* background: linear-gradient(
+    to top,
+    rgb(37, 37, 37),
+    rgba(58, 57, 57, 0.591),
+    transparent
+  ); */
+  background: linear-gradient(
+    to top,
+    rgb(37, 37, 37),
+    rgba(37, 37, 37, 0.597),
+    transparent
+  );
+  padding: 10px 20px;
+  display: grid;
+  place-items: center;
+  font-family: "rafah";
+  font-size: 1.5rem;
+  gap: 15px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: url(../assets/images/grid.jpg) center center / cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  .social {
+    display: flex;
+    gap: 20px;
+
+    .icon {
+      font-size: 1.5rem;
+      color: rgb(41, 41, 39);
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        color: rgb(133, 97, 7);
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  > p {
+    font-size: 1rem;
+    color: white;
   }
 }
 
