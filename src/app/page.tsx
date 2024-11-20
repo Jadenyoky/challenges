@@ -2,20 +2,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { challenges } from "./challenges";
+import challenges from "./challenges";
 import { moving, moving2, moving3, moving4, moving5 } from "./anime";
-// import _ from "lodash";
+import logo from "../assets/images/challenge.png";
 
 const Page = () => {
-  // const [arr, setarr] = useState(challenges);
-  // const shuffling = () => {
-  //   setarr(_.shuffle(challenges));
-  // };
-
-  // useEffect(() => {
-  //   shuffling();
-  // }, []);
-
   return (
     <main
       style={{
@@ -30,9 +21,10 @@ const Page = () => {
       >
         <motion.div className="background" variants={moving2} />
         <motion.div variants={moving3} className="text-header">
-          Challenges By <span>Jaden</span>
+          <Image alt="logo" src={logo} /> Challenges By <span>Jaden</span>
         </motion.div>
       </motion.div>
+      
       <motion.div
         variants={moving4}
         initial="initial"

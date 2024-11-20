@@ -1,5 +1,5 @@
 import "./globals.css";
-import Prev from "./back";
+import Prev from "./(components)/back";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

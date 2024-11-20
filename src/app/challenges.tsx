@@ -3,7 +3,6 @@ import pic1 from "../assets/challenges-images/bento-grid.jpg";
 import pic2 from "../assets/challenges-images/social-links.jpg";
 import pic3 from "../assets/challenges-images/12.jpg";
 import { StaticImageData } from "next/image";
-import _ from "lodash";
 
 type Challenge = {
   name: string;
@@ -11,7 +10,7 @@ type Challenge = {
   pic: StaticImageData;
 };
 
-const arr: Challenge[] = [
+const challenges: Challenge[] = [
   {
     name: "Bento Grid",
     link: "/bento-grid",
@@ -54,4 +53,4 @@ const arr: Challenge[] = [
   },
 ];
 
-export const challenges = _.shuffle(arr);
+export default challenges;

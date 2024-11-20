@@ -15,8 +15,7 @@
   box-sizing: border-box;
 }
 
-body {
-}
+body {}
 
 .main {
   height: 100svh;
@@ -44,8 +43,17 @@ body {
     font-size: 1.5rem;
     font-family: "rafah";
     color: white;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 
-    > span {
+
+    >img {
+      max-width: 50px;
+    }
+
+    >span {
       color: #72fa93;
       font-style: italic;
       text-shadow: 0px 0px 20px #000000;
@@ -71,13 +79,13 @@ body {
     align-items: center;
     overflow: hidden;
 
-    > * {
+    >* {
       transition: all 0.5s;
       opacity: 0;
       transform: scale(0.5) translateX(-100%);
     }
 
-    > span {
+    >span {
       position: absolute;
       top: 10px;
       left: 20px;
@@ -88,7 +96,7 @@ body {
       font-weight: bold;
     }
 
-    > p {
+    >p {
       position: absolute;
       left: 20px;
       bottom: 20px;
@@ -99,7 +107,7 @@ body {
       font-weight: 500;
     }
 
-    > div {
+    >div {
       position: absolute;
       top: 0;
       background-color: rgba(0, 0, 0, 0.502);
@@ -108,7 +116,7 @@ body {
       z-index: 1;
     }
 
-    > img {
+    >img {
       opacity: 1;
       transform: scale(1) translateX(0);
       aspect-ratio: 3 / 2;
@@ -119,12 +127,12 @@ body {
 .content {
   .challenge {
     &:hover {
-      > * {
+      >* {
         opacity: 1;
         transform: scale(1) translateX(0);
       }
 
-      > img {
+      >img {
         transform: scale(1.5);
       }
     }
@@ -148,7 +156,7 @@ body {
 
   z-index: 10;
 
-  > i {
+  >i {
     margin: 8px 0 0 -8px;
     font-size: 4rem;
   }
@@ -170,7 +178,7 @@ body {
       background-color: rgba(0, 0, 0, 0.715);
     }
 
-    > i {
+    >i {
       color: #72fa93;
     }
   }
@@ -180,6 +188,14 @@ body {
   .main {
     .text-header {
       font-size: 1.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main {
+    .text-header {
+      font-size: 1rem;
     }
   }
 }
