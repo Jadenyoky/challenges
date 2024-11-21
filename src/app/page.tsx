@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import challenges from "./challenges";
@@ -15,7 +15,6 @@ import {
 } from "./anime";
 import logo from "../assets/images/challenge.png";
 import { useState } from "react";
-import Modal from "./modal";
 
 const Page = () => {
   const social = [
@@ -104,6 +103,7 @@ interface types {
     dateStart: string;
     date: string;
     days: string;
+    skills: string[];
   };
   index: number;
 }
@@ -157,21 +157,35 @@ const Challenge = ({ data, index }: types) => {
             >
               <i className="fi fi-sr-square-close"></i> close
             </motion.div>
+
             <motion.div className="header" variants={moving5}>
               {data.name}
             </motion.div>
+
             <motion.div className="image" variants={moving5}>
               <Image src={data.pic} alt={data.name} />
             </motion.div>
+
             <motion.div className="status" variants={moving5}>
               Start: <span style={{ color: "white" }}>{data.dateStart}</span>
             </motion.div>
+
             <motion.div className="status" variants={moving5}>
               Finish: <span style={{ color: "white" }}>{data.date}</span>
             </motion.div>
+
             <motion.div className="status" variants={moving5}>
               Proccess:
               <span style={{ color: "white" }}>{data.days}</span>
+            </motion.div>
+
+            <motion.div className="status" variants={moving5}>
+              skills:
+              <div className="skills">
+                {data.skills.map((skill, index) => {
+                  return <span key={index}>{skill}</span>;
+                })}
+              </div>
             </motion.div>
           </motion.div>
         </motion.div>

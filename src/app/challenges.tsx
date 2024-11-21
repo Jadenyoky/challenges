@@ -1,7 +1,6 @@
 "use client";
 import pic1 from "../assets/challenges-images/bento-grid.jpg";
 import pic2 from "../assets/challenges-images/social-links.jpg";
-import pic3 from "../assets/challenges-images/12.jpg";
 import { StaticImageData } from "next/image";
 import moment from "moment";
 
@@ -12,6 +11,7 @@ type Challenge = {
   dateStart: string;
   date: string;
   days: string;
+  skills: string[];
 };
 
 const handleDate = (date: string) => {
@@ -36,6 +36,7 @@ const challenges: Challenge[] = [
     dateStart: handleDate("11/14/2024"),
     date: handleDate("11/17/2024"),
     days: handleDays("11/14/2024", "11/17/2024"),
+    skills: ["html", "css"],
   },
   {
     name: "Social Links",
@@ -44,6 +45,7 @@ const challenges: Challenge[] = [
     dateStart: handleDate("11/19/2024"),
     date: handleDate("11/19/2024"),
     days: handleDays("11/19/2024", "11/19/2024"),
+    skills: ["html", "css"],
   },
 ];
 
