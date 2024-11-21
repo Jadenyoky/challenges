@@ -9,6 +9,7 @@ type Challenge = {
   name: string;
   link: string;
   pic: StaticImageData;
+  dateStart: string;
   date: string;
   days: string;
 };
@@ -32,6 +33,7 @@ const challenges: Challenge[] = [
     name: "Bento Grid",
     link: "/bento-grid",
     pic: pic1,
+    dateStart: handleDate("11/14/2024"),
     date: handleDate("11/17/2024"),
     days: handleDays("11/14/2024", "11/17/2024"),
   },
@@ -39,7 +41,8 @@ const challenges: Challenge[] = [
     name: "Social Links",
     link: "/social-links",
     pic: pic2,
-    date: handleDate("11/18/2024"),
+    dateStart: handleDate("11/19/2024"),
+    date: handleDate("11/19/2024"),
     days: handleDays("11/19/2024", "11/19/2024"),
   },
 ];

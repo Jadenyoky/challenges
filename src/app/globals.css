@@ -88,66 +88,98 @@ body {
     align-items: center;
     overflow: hidden;
 
-    > * {
-      transition: all 0.5s;
-      opacity: 0;
-      transform: scale(0.5) translateX(-100%);
+    .card {
+      > * {
+        transition: all 0.5s;
+        opacity: 0;
+        transform: scale(0.5) translateX(-100%);
+      }
+
+      > span {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-family: "rafah";
+        font-size: 1.3rem;
+        z-index: 2;
+        color: white;
+        font-weight: bold;
+      }
+
+      > .name {
+        position: absolute;
+        left: 20px;
+        bottom: 50px;
+        font-family: "rafah";
+        font-size: 1.3rem;
+        z-index: 2;
+        color: white;
+      }
+
+      > .date {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        font-family: "rafah";
+        font-size: 1rem;
+        z-index: 2;
+        color: #72fa93;
+      }
+
+      > .days {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        font-family: "rafah";
+        font-size: 1rem;
+        z-index: 2;
+        color: #72fa93;
+      }
+
+      > .highlight {
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.502);
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+      }
+
+      > img {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+        aspect-ratio: 3 / 2;
+      }
     }
 
-    > span {
+    > .info {
       position: absolute;
       top: 10px;
-      left: 20px;
-      font-family: "rafah";
-      font-size: 1.3rem;
-      z-index: 2;
-      color: white;
-      font-weight: bold;
-    }
-
-    > .name {
-      position: absolute;
-      left: 20px;
-      bottom: 50px;
-      font-family: "rafah";
-      font-size: 1.3rem;
-      z-index: 2;
-      color: white;
-    }
-
-    > .date {
-      position: absolute;
-      left: 20px;
-      bottom: 20px;
-      font-family: "rafah";
-      font-size: 1rem;
-      z-index: 2;
-      color: #72fa93;
-    }
-
-    > .days {
-      position: absolute;
       right: 20px;
-      bottom: 20px;
       font-family: "rafah";
-      font-size: 1rem;
+      font-size: 1.3rem;
       z-index: 2;
-      color: #72fa93;
-    }
-
-    > div {
-      position: absolute;
-      top: 0;
-      background-color: rgba(0, 0, 0, 0.502);
-      height: 100%;
-      width: 100%;
-      z-index: 1;
-    }
-
-    > img {
       opacity: 1;
       transform: scale(1) translateX(0);
-      aspect-ratio: 3 / 2;
+      transition: all 0.5s;
+      cursor: pointer;
+      background-color: #333333;
+      color: #72fa93;
+      padding: 0 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      > i {
+        margin-top: 3px;
+        color: white;
+      }
+
+      &:hover {
+        transform: scale(1.1) translateX(0);
+      }
     }
   }
 }
@@ -155,13 +187,15 @@ body {
 .content {
   .challenge {
     &:hover {
-      > * {
-        opacity: 1;
-        transform: scale(1) translateX(0);
-      }
+      .card {
+        > * {
+          opacity: 1;
+          transform: scale(1) translateX(0);
+        }
 
-      > img {
-        transform: scale(1.5);
+        > img {
+          transform: scale(1.5);
+        }
       }
     }
   }
@@ -253,6 +287,7 @@ body {
       color: rgb(41, 41, 39);
       cursor: pointer;
       transition: all 0.3s;
+
       &:hover {
         color: rgb(133, 97, 7);
         transform: scale(1.5);
@@ -266,10 +301,131 @@ body {
   }
 }
 
+.modal {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: all 0.3s;
+  background-color: #1d1f1eab;
+  display: grid;
+  place-items: center;
+  font-family: "rafah";
+
+  > .modalCard {
+    position: relative;
+    padding: 20px;
+    overflow: auto;
+    height: 70%;
+    border-radius: 16px;
+    display: grid;
+    place-items: baseline;
+    gap: 10px;
+    color: #72fa93;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../assets/images/grid.jpg) no-repeat center center / cover;
+      z-index: -1;
+      opacity: 1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(27, 26, 26, 0.863);
+      z-index: -1;
+    }
+
+    .header {
+      font-size: 1.3rem;
+    }
+
+    .status {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .image {
+      width: 300px;
+
+      img {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+    }
+
+    > .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 1rem;
+      cursor: pointer;
+      background: black;
+      color: #72fa94;
+      border-radius: 0 0 0 10px;
+      font-family: "rafah";
+      padding: 5px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    .challenge {
+      &:hover {
+        .card {
+          > * {
+            opacity: 0;
+            transform: initial;
+          }
+
+          > img {
+            opacity: 1;
+            transform: initial;
+          }
+        }
+
+        > .info {
+          transform: initial;
+        }
+      }
+    }
+  }
+
+  .footer {
+    .social {
+      .icon {
+        &:hover {
+          color: rgb(41, 41, 39);
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 500px) {
   .main {
     .text-header {
       font-size: 1.3rem;
+    }
+  }
+
+  .content {
+    .challenge {
+      > .info {
+        font-size: 1rem;
+      }
     }
   }
 }

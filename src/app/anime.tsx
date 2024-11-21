@@ -72,3 +72,30 @@ export const moving6 = {
     },
   },
 };
+
+export const moving7 = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+      when: "beforeChildren",
+    },
+  },
+};
+
+export const moving8 = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      staggerChildren: 0.5,
+      when: "beforeChildren",
+    },
+  },
+};

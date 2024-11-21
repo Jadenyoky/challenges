@@ -1,11 +1,21 @@
 "use client";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import challenges from "./challenges";
-import { moving, moving2, moving3, moving4, moving5, moving6 } from "./anime";
+import {
+  moving,
+  moving2,
+  moving3,
+  moving4,
+  moving5,
+  moving6,
+  moving7,
+  moving8,
+} from "./anime";
 import logo from "../assets/images/challenge.png";
 import { useState } from "react";
+import Modal from "./modal";
 
 const Page = () => {
   const social = [
@@ -50,23 +60,7 @@ const Page = () => {
         className="content"
       >
         {challenges.map((challenge, index) => {
-          return (
-            <Link href={challenge.link} key={index}>
-              <motion.div
-                key={challenges[index].name}
-                variants={moving5}
-                className={`challenge challenge${index + 1} `}
-              >
-                <span>{index + 1 < 10 ? `0${index + 1}` : index + 1}</span>
-                <p className="name">{challenge.name}</p>
-                <p className="date">{challenge.date}</p>
-                <p className="days">{challenge.days}</p>
-
-                <div />
-                <Image alt={challenge.name} src={challenge.pic} />
-              </motion.div>
-            </Link>
-          );
+          return <Challenge key={index} data={challenge} index={index} />;
         })}
       </motion.div>
 
@@ -99,6 +93,90 @@ const Page = () => {
         </p>
       </motion.div>
     </main>
+  );
+};
+
+interface types {
+  data: {
+    name: string;
+    link: string;
+    pic: StaticImageData;
+    dateStart: string;
+    date: string;
+    days: string;
+  };
+  index: number;
+}
+
+const Challenge = ({ data, index }: types) => {
+  const [showInfo, setshowInfo] = useState<boolean>(false);
+  return (
+    <motion.div
+      key={Challenge.name}
+      variants={moving5}
+      className={`challenge challenge${index + 1} `}
+    >
+      <Link className="card" href={data.link} key={index}>
+        <span>{index + 1 < 10 ? `0${index + 1}` : index + 1}</span>
+
+        <p className="name">{data.name}</p>
+        <p className="date">{data.date}</p>
+        <p className="days">{data.days}</p>
+
+        <div className="highlight" />
+
+        <Image alt={data.name} src={data.pic} />
+      </Link>
+
+      <div
+        className="info"
+        onClick={() => {
+          setshowInfo(true);
+        }}
+      >
+        <i className="fi fi-sr-square-info"></i> info
+      </div>
+
+      {showInfo && (
+        <motion.div
+          variants={moving7}
+          initial="initial"
+          animate="animate"
+          className="modal"
+        >
+          <motion.div
+            className="modalCard"
+            variants={moving8}
+            initial="initial"
+            animate="animate"
+          >
+            <motion.div
+              onClick={() => setshowInfo(false)}
+              className="close"
+              variants={moving7}
+            >
+              <i className="fi fi-sr-square-close"></i> close
+            </motion.div>
+            <motion.div className="header" variants={moving5}>
+              {data.name}
+            </motion.div>
+            <motion.div className="image" variants={moving5}>
+              <Image src={data.pic} alt={data.name} />
+            </motion.div>
+            <motion.div className="status" variants={moving5}>
+              Start: <span style={{ color: "white" }}>{data.dateStart}</span>
+            </motion.div>
+            <motion.div className="status" variants={moving5}>
+              Finish: <span style={{ color: "white" }}>{data.date}</span>
+            </motion.div>
+            <motion.div className="status" variants={moving5}>
+              Proccess:
+              <span style={{ color: "white" }}>{data.days}</span>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      )}
+    </motion.div>
   );
 };
 
