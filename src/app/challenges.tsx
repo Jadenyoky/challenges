@@ -2,6 +2,7 @@
 import pic1 from "../assets/challenges-images/bento-grid.jpg";
 import pic2 from "../assets/challenges-images/social-links.jpg";
 import pic3 from "../assets/challenges-images/qr-code.jpg";
+import pic4 from "../assets/challenges-images/blog-card.jpg";
 import { StaticImageData } from "next/image";
 import moment from "moment";
 
@@ -61,6 +62,15 @@ const challenges: Challenge[] = [
     dateStart: handleDate("11/22/2024"),
     date: handleDate("11/22/2024"),
     days: handleTime("11/22/2024 18:40", "11/22/2024 19:20"),
+    skills: ["html", "css"],
+  },
+  {
+    name: "blog card",
+    link: "/blog-card",
+    pic: pic4,
+    dateStart: handleDate("11/22/2024"),
+    date: handleDate("11/22/2024"),
+    days: handleTime("11/23/2024 00:10", "11/23/2024 00:50"),
     skills: ["html", "css"],
   },
 ];

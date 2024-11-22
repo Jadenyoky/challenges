@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+
+.container {
+  background-color: #f5d04e;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 7px 7px 1px black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: auto;
+    align-items: baseline;
+    font-family: figtree;
+
+    .image1 {
+      width: 100%;
+      border-radius: 8px;
+      align-self: center;
+    }
+
+    .tag {
+      font-weight: 700;
+      background-color: #f5d04e;
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .text_1 {
+      color: black;
+    }
+
+    .text_2 {
+      color: black;
+      font-weight: 800;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.1s ease-in-out;
+
+      &:hover {
+        color: #f5d04e;
+      }
+    }
+
+    .text_3 {
+      color: grey;
+    }
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .image2 {
+        width: 35px;
+      }
+
+      .text_4 {
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    .card {
+      .text_2 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
