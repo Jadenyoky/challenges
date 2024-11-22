@@ -5,8 +5,13 @@
 @import "~@flaticon/flaticon-uicons/css/all/all";
 
 @font-face {
-  font-family: "rafah";
+  font-family: rafah;
   src: url("../assets/fonts/rafah.ttf");
+}
+
+:root {
+  --green: #72fa93;
+  --font: rafah;
 }
 
 * {
@@ -34,7 +39,7 @@ body {
   align-items: center;
   position: sticky;
   top: 0;
-  box-shadow: 0px 10px 1px #72fa93;
+  box-shadow: 0px 10px 1px var(--green);
   background-color: black;
   border-radius: 0px 0 0px 24px;
   z-index: 5;
@@ -51,7 +56,7 @@ body {
 
   .text-header {
     font-size: 1.5rem;
-    font-family: "rafah";
+    font-family: var(--font);
     color: white;
     display: flex;
     gap: 10px;
@@ -63,7 +68,7 @@ body {
     }
 
     >span {
-      color: #72fa93;
+      color: var(--green);
       font-style: italic;
       text-shadow: 0px 0px 20px #000000;
     }
@@ -99,7 +104,7 @@ body {
         position: absolute;
         top: 10px;
         left: 20px;
-        font-family: "rafah";
+        font-family: var(--font);
         font-size: 1.3rem;
         z-index: 2;
         color: white;
@@ -110,7 +115,7 @@ body {
         position: absolute;
         left: 20px;
         bottom: 50px;
-        font-family: "rafah";
+        font-family: var(--font);
         font-size: 1.3rem;
         z-index: 2;
         color: white;
@@ -120,20 +125,20 @@ body {
         position: absolute;
         left: 20px;
         bottom: 20px;
-        font-family: "rafah";
+        font-family: var(--font);
         font-size: 1rem;
         z-index: 2;
-        color: #72fa93;
+        color: var(--green);
       }
 
       >.days {
         position: absolute;
         right: 20px;
         bottom: 20px;
-        font-family: "rafah";
+        font-family: var(--font);
         font-size: 1rem;
         z-index: 2;
-        color: #72fa93;
+        color: var(--green);
       }
 
       >.highlight {
@@ -156,7 +161,7 @@ body {
       position: absolute;
       top: 10px;
       right: 20px;
-      font-family: "rafah";
+      font-family: var(--font);
       font-size: 1.3rem;
       z-index: 2;
       opacity: 1;
@@ -164,7 +169,7 @@ body {
       transition: all 0.5s;
       cursor: pointer;
       background-color: #333333;
-      color: #72fa93;
+      color: var(--green);
       padding: 0 20px;
       border-radius: 10px;
       display: flex;
@@ -241,18 +246,12 @@ body {
     }
 
     >i {
-      color: #72fa93;
+      color: var(--green);
     }
   }
 }
 
 .footer {
-  /* background: linear-gradient(
-    to top,
-    rgb(37, 37, 37),
-    rgba(58, 57, 57, 0.591),
-    transparent
-  ); */
   background: linear-gradient(to top,
       rgb(37, 37, 37),
       rgba(37, 37, 37, 0.597),
@@ -260,7 +259,7 @@ body {
   padding: 10px 20px;
   display: grid;
   place-items: center;
-  font-family: "rafah";
+  font-family: var(--font);
   font-size: 1.5rem;
   gap: 15px;
   position: relative;
@@ -310,18 +309,19 @@ body {
   background-color: #1d1f1eab;
   display: grid;
   place-items: center;
-  font-family: "rafah";
+  font-family: var(--font);
 
   >.modalCard {
     position: relative;
     padding: 20px;
     overflow: auto;
     height: 70%;
+    max-width: 90%;
     border-radius: 16px;
     display: grid;
     place-items: baseline;
     gap: 10px;
-    color: #72fa93;
+    color: var(--green);
 
     &::before {
       content: "";
@@ -352,10 +352,30 @@ body {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      gap: 10px;
+
+      .proccess {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        >span {
+          color: white;
+        }
+
+        >span:nth-child(2) {
+          color: var(--green);
+        }
+      }
 
       .skills {
         display: flex;
-        flex-direction: column;
+        gap: 10px;
+        justify-content: end;
+        flex-wrap: wrap;
 
         >span {
           color: white;
@@ -375,14 +395,22 @@ body {
       }
     }
 
-
-
     .image {
       width: 300px;
+      cursor: pointer;
+      transition: box-shadow 0.3s;
+      justify-self: center;
+      margin-bottom: 10px;
 
       img {
         max-width: 100%;
         border-radius: 8px;
+        box-shadow: -5px 5px 1px var(--green);
+        transition: box-shadow 0.3s;
+      }
+
+      &:hover {
+        box-shadow: -5px 5px 200px var(--green);
       }
     }
 
@@ -393,9 +421,9 @@ body {
       font-size: 1rem;
       cursor: pointer;
       background: black;
-      color: #72fa94;
+      color: var(--green);
       border-radius: 0 0 0 10px;
-      font-family: "rafah";
+      font-family: var(--font);
       padding: 5px 10px;
     }
   }
@@ -404,20 +432,16 @@ body {
 ::-webkit-scrollbar {
   width: 10px;
   background-color: transparent;
-  transition: all 0.5s;
-
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to top, transparent, #72fa93, transparent);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  background: linear-gradient(to top, transparent, var(--green), transparent);
 }
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
   border-radius: 10px;
 }
-
 
 @media screen and (max-width: 768px) {
   .content {
@@ -448,6 +472,31 @@ body {
         &:hover {
           color: rgb(41, 41, 39);
           transform: none;
+        }
+      }
+    }
+  }
+
+  .modal {
+    .modalCard {
+      .image {
+        width: 300px;
+        cursor: pointer;
+        transition: box-shadow 0.3s;
+
+        img {
+          max-width: 100%;
+          border-radius: 8px;
+          box-shadow: -5px 5px 1px var(--green);
+          transition: box-shadow 0.3s;
+        }
+
+        &:hover {
+          box-shadow: initial;
+        }
+
+        &:active {
+          box-shadow: -5px 5px 200px var(--green);
         }
       }
     }

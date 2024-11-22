@@ -51,7 +51,6 @@ const Page = () => {
           <Image alt="logo" src={logo} /> Challenges By <span>Jaden</span>
         </motion.div>
       </motion.div>
-
       <motion.div
         variants={moving4}
         initial="initial"
@@ -102,7 +101,7 @@ interface types {
     pic: StaticImageData;
     dateStart: string;
     date: string;
-    days: string;
+    days: string[];
     skills: string[];
   };
   index: number;
@@ -112,7 +111,7 @@ const Challenge = ({ data, index }: types) => {
   const [showInfo, setshowInfo] = useState<boolean>(false);
   return (
     <motion.div
-      key={Challenge.name}
+      key={index}
       variants={moving5}
       className={`challenge challenge${index + 1} `}
     >
@@ -159,31 +158,43 @@ const Challenge = ({ data, index }: types) => {
             </motion.div>
 
             <motion.div className="header" variants={moving5}>
-              {data.name}
+              {data.name ? data.name : "-"}
             </motion.div>
 
             <motion.div className="image" variants={moving5}>
-              <Image src={data.pic} alt={data.name} />
+              <Link href={data.link}>
+                <Image src={data.pic} alt={data.name} />
+              </Link>
             </motion.div>
 
             <motion.div className="status" variants={moving5}>
-              Start: <span style={{ color: "white" }}>{data.dateStart}</span>
+              Start:{" "}
+              <span style={{ color: "white" }}>
+                {data.dateStart ? data.dateStart : "-"}
+              </span>
             </motion.div>
 
             <motion.div className="status" variants={moving5}>
-              Finish: <span style={{ color: "white" }}>{data.date}</span>
+              Finish:{" "}
+              <span style={{ color: "white" }}>
+                {data.date ? data.date : "-"}
+              </span>
             </motion.div>
 
             <motion.div className="status" variants={moving5}>
               Proccess:
-              <span style={{ color: "white" }}>{data.days}</span>
+              <div className="proccess">
+                {data.days.map((time, index) => {
+                  return <span key={index}>{time ? time : "-"}</span>;
+                })}
+              </div>
             </motion.div>
 
             <motion.div className="status" variants={moving5}>
               skills:
               <div className="skills">
                 {data.skills.map((skill, index) => {
-                  return <span key={index}>{skill}</span>;
+                  return <span key={index}>{skill ? skill : "-"}</span>;
                 })}
               </div>
             </motion.div>
