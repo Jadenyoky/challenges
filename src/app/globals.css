@@ -316,12 +316,12 @@ body {
     padding: 20px;
     overflow: auto;
     height: 70%;
-    max-width: 90%;
     border-radius: 16px;
     display: grid;
     place-items: baseline;
     gap: 10px;
     color: var(--green);
+    margin: 20px;
 
     &::before {
       content: "";
@@ -397,6 +397,7 @@ body {
 
     .image {
       width: 300px;
+      max-width: 90%;
       cursor: pointer;
       transition: box-shadow 0.3s;
       justify-self: center;
