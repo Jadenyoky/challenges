@@ -37,7 +37,7 @@ const Page = () => {
     },
   ];
 
-  const [year, setyear] = useState(new Date().getFullYear());
+  const year = new Date().getFullYear();
 
   const sorted = _.orderBy(challenges, "dateStart", "desc");
 
@@ -54,6 +54,7 @@ const Page = () => {
           <Image alt="logo" src={logo} /> Challenges By <span>Jaden</span>
         </motion.div>
       </motion.div>
+
       <motion.div
         variants={moving4}
         initial="initial"

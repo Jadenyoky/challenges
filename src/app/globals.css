@@ -39,7 +39,7 @@ body {
   align-items: center;
   position: sticky;
   top: 0;
-  box-shadow: 0px 10px 1px var(--green);
+  box-shadow: 0px 10px 1px #F6D154;
   background-color: black;
   border-radius: 0px 0 0px 24px;
   z-index: 5;
@@ -63,11 +63,11 @@ body {
     justify-content: center;
     align-items: center;
 
-    > img {
+    >img {
       max-width: 50px;
     }
 
-    > span {
+    >span {
       color: var(--green);
       font-style: italic;
       text-shadow: 0px 0px 20px #000000;
@@ -94,13 +94,13 @@ body {
     overflow: hidden;
 
     .card {
-      > * {
+      >* {
         transition: all 0.5s;
         opacity: 0;
         transform: scale(0.5) translateX(-100%);
       }
 
-      > span {
+      >span {
         position: absolute;
         top: 10px;
         left: 20px;
@@ -111,7 +111,7 @@ body {
         font-weight: bold;
       }
 
-      > .name {
+      >.name {
         position: absolute;
         left: 20px;
         bottom: 50px;
@@ -121,7 +121,7 @@ body {
         color: white;
       }
 
-      > .date {
+      >.date {
         position: absolute;
         left: 20px;
         bottom: 20px;
@@ -131,7 +131,7 @@ body {
         color: var(--green);
       }
 
-      > .days {
+      >.days {
         position: absolute;
         right: 20px;
         bottom: 20px;
@@ -145,12 +145,12 @@ body {
         flex-wrap: wrap;
         justify-content: flex-end;
 
-        > span:nth-child(2) {
+        >span:nth-child(2) {
           color: white;
         }
       }
 
-      > .highlight {
+      >.highlight {
         position: absolute;
         top: 0;
         background-color: rgba(0, 0, 0, 0.502);
@@ -159,14 +159,14 @@ body {
         z-index: 1;
       }
 
-      > img {
+      >img {
         opacity: 1;
         transform: scale(1) translateX(0);
         aspect-ratio: 3 / 2;
       }
     }
 
-    > .info {
+    >.info {
       position: absolute;
       top: 10px;
       right: 20px;
@@ -186,7 +186,7 @@ body {
       align-items: center;
       gap: 10px;
 
-      > i {
+      >i {
         margin-top: 3px;
         color: white;
       }
@@ -202,12 +202,12 @@ body {
   .challenge {
     &:hover {
       .card {
-        > * {
+        >* {
           opacity: 1;
           transform: scale(1) translateX(0);
         }
 
-        > img {
+        >img {
           transform: scale(1.5);
         }
       }
@@ -232,7 +232,7 @@ body {
 
   z-index: 10;
 
-  > i {
+  >i {
     margin: 8px 0 0 -8px;
     font-size: 4rem;
   }
@@ -254,19 +254,17 @@ body {
       background-color: rgba(0, 0, 0, 0.715);
     }
 
-    > i {
+    >i {
       color: var(--green);
     }
   }
 }
 
 .footer {
-  background: linear-gradient(
-    to top,
-    rgb(37, 37, 37),
-    rgba(37, 37, 37, 0.597),
-    transparent
-  );
+  background: linear-gradient(to top,
+      rgb(37, 37, 37),
+      rgba(37, 37, 37, 0.597),
+      transparent);
   padding: 10px 20px;
   display: grid;
   place-items: center;
@@ -303,7 +301,7 @@ body {
     }
   }
 
-  > p {
+  >p {
     font-size: 1rem;
     color: white;
   }
@@ -322,7 +320,7 @@ body {
   place-items: center;
   font-family: var(--font);
 
-  > .modalCard {
+  >.modalCard {
     position: relative;
     padding: 20px;
     overflow: auto;
@@ -373,11 +371,11 @@ body {
         flex-wrap: wrap;
         gap: 10px;
 
-        > span {
+        >span {
           color: white;
         }
 
-        > span:nth-child(2) {
+        >span:nth-child(2) {
           color: var(--green);
         }
       }
@@ -388,19 +386,19 @@ body {
         justify-content: end;
         flex-wrap: wrap;
 
-        > span {
+        >span {
           color: white;
         }
 
-        > span:nth-child(1) {
+        >span:nth-child(1) {
           color: rgb(255, 149, 0);
         }
 
-        > span:nth-child(2) {
+        >span:nth-child(2) {
           color: rgb(98, 203, 255);
         }
 
-        > span:nth-child(3) {
+        >span:nth-child(3) {
           color: #fceb66;
         }
       }
@@ -426,7 +424,7 @@ body {
       }
     }
 
-    > .close {
+    >.close {
       position: absolute;
       top: 0;
       right: 0;
@@ -460,18 +458,18 @@ body {
     .challenge {
       &:hover {
         .card {
-          > * {
+          >* {
             opacity: 0;
             transform: initial;
           }
 
-          > img {
+          >img {
             opacity: 1;
             transform: initial;
           }
         }
 
-        > .info {
+        >.info {
           transform: initial;
         }
       }
@@ -524,7 +522,7 @@ body {
 
   .content {
     .challenge {
-      > .info {
+      >.info {
         font-size: 1rem;
       }
     }
