@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+
+.container {
+  min-height: 100svh;
+  background-color: #f3e5d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    background-color: white;
+    width: 500px;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .image {
+      .image1 {
+        border-radius: 8px;
+        max-width: 100%;
+      }
+    }
+
+    .inner {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .header {
+        font: 1.5rem "young serif";
+      }
+      .sub {
+        font: 0.9rem "outfit";
+        color: #60605f;
+      }
+
+      .time {
+        background-color: #ffefe1bf;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: baseline;
+        align-items: baseline;
+        flex-direction: column;
+        gap: 15px;
+        .title {
+          color: #a73566;
+          font: 600 1.1rem "outfit";
+        }
+        .list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .item {
+            font: 0.8rem "outfit";
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            &::before {
+              content: "";
+              margin: 0 20px 0 10px;
+              background-color: #a73566;
+              height: 4px;
+              width: 4px;
+              border-radius: 50%;
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+      .ingredients {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .title {
+          color: #8d3619;
+          font: 500 1.3rem "young serif";
+        }
+        .list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .item {
+            font: 0.85rem "outfit";
+            color: #60605f;
+            display: flex;
+            align-items: center;
+            &::before {
+              content: "";
+              margin: 0 20px 0 5px;
+              background-color: #a73566;
+              height: 4px;
+              width: 4px;
+              border-radius: 50%;
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+      .Instructions {
+        .title {
+          color: #8d3619;
+          font: 500 1.3rem "young serif";
+        }
+
+        .list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin: 15px 5px;
+          font-weight: bold;
+          counter-reset: item;
+
+          .item {
+            font: 0.85rem "outfit";
+            color: #60605f;
+            display: flex;
+            gap: 5px;
+
+            &::before {
+              content: counter(item) ". ";
+              counter-increment: item;
+              color: #a73566;
+              display: inline-block;
+              margin-right: 10px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .nutrition {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .title {
+          color: #8d3619;
+          font: 500 1.3rem "young serif";
+        }
+        .sub {
+          font: 0.9rem "outfit";
+          color: #60605f;
+        }
+        .table {
+          display: grid;
+          align-items: baseline;
+          margin-top: -10px;
+          .item {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: white;
+            padding: 15px 25px;
+            color: #60605f;
+            font-family: "outfit";
+            gap: 20px;
+
+            .cal {
+              color: #8d3619;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    .card {
+      border-radius: 0;
+      width: 100%;
+      margin: 0px;
+      box-sizing: border-box;
+      padding: 0;
+
+      .image {
+        .image1 {
+          border-radius: 0px;
+        }
+      }
+
+      .inner {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .table {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

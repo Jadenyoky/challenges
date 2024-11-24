@@ -15,6 +15,7 @@ import {
 } from "./anime";
 import logo from "../assets/images/challenge.png";
 import { useState } from "react";
+import _ from "lodash";
 
 const Page = () => {
   const social = [
@@ -38,6 +39,8 @@ const Page = () => {
 
   const [year, setyear] = useState(new Date().getFullYear());
 
+  const sorted = _.orderBy(challenges, "dateStart", "desc");
+
   return (
     <main className="all">
       <motion.div
@@ -57,7 +60,7 @@ const Page = () => {
         animate="animate"
         className="content"
       >
-        {challenges.map((challenge, index) => {
+        {sorted.map((challenge, index) => {
           return <Challenge key={index} data={challenge} index={index} />;
         })}
       </motion.div>
@@ -120,7 +123,11 @@ const Challenge = ({ data, index }: types) => {
 
         <p className="name">{data.name}</p>
         <p className="date">{data.date}</p>
-        <p className="days">{data.days}</p>
+        <p className="days">
+          {data.days.map((time, index) => {
+            return <span key={index}>{time ? time : "-"}</span>;
+          })}
+        </p>
 
         <div className="highlight" />
 
