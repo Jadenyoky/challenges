@@ -89,7 +89,7 @@ const challenges: Challenge[] = [
     link: "/feature-section",
     pic: pic6,
     dateStart: handleDate("11/25/2024"),
-    date: handleDate("11/24/2024"),
+    date: handleDate("11/26/2024"),
     days: handleTime("11/25/2024 22:58", "11/26/2024 01:05"),
     skills: ["html", "css"],
   },
