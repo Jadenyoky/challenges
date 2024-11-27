@@ -113,6 +113,13 @@ interface types {
 
 const Challenge = ({ data, index }: types) => {
   const [showInfo, setshowInfo] = useState<boolean>(false);
+
+  const handleOpen = () => {
+    setshowInfo(true);
+  };
+  const handleClose = () => {
+    setshowInfo(false);
+  };
   return (
     <motion.div
       key={index}
@@ -138,7 +145,7 @@ const Challenge = ({ data, index }: types) => {
       <div
         className="info"
         onClick={() => {
-          setshowInfo(true);
+          handleOpen();
         }}
       >
         <i className="fi fi-sr-square-info"></i> info
@@ -152,13 +159,23 @@ const Challenge = ({ data, index }: types) => {
           className="modal"
         >
           <motion.div
+            variants={moving7}
+            className="highlight"
+            onClick={() => {
+              handleClose();
+            }}
+          />
+
+          <motion.div
             className="modalCard"
             variants={moving8}
             initial="initial"
             animate="animate"
           >
             <motion.div
-              onClick={() => setshowInfo(false)}
+              onClick={() => {
+                handleClose();
+              }}
               className="close"
               variants={moving7}
             >

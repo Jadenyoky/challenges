@@ -93,6 +93,15 @@ const challenges: Challenge[] = [
     days: handleTime("11/25/2024 22:58", "11/26/2024 01:05"),
     skills: ["html", "css"],
   },
+  {
+    name: "Feature section sectionsection section",
+    link: "/feature-section",
+    pic: pic6,
+    dateStart: handleDate("11/25/2024"),
+    date: handleDate("11/26/2024"),
+    days: handleTime("11/25/2024 22:58", "11/26/2024 01:05"),
+    skills: ["html", "css"],
+  },
 ];
 
 export default challenges;
