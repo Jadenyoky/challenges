@@ -5,6 +5,7 @@ import pic3 from "../assets/challenges-images/qr-code.jpg";
 import pic4 from "../assets/challenges-images/blog-card.jpg";
 import pic5 from "../assets/challenges-images/recipe-page.jpg";
 import pic6 from "../assets/challenges-images/feature-section.jpg";
+import pic7 from "../assets/challenges-images/easybank-landing.jpg";
 import { StaticImageData } from "next/image";
 import moment from "moment";
 
@@ -94,13 +95,13 @@ const challenges: Challenge[] = [
     skills: ["html", "css"],
   },
   {
-    name: "Feature section sectionsection section",
-    link: "/feature-section",
-    pic: pic6,
-    dateStart: handleDate("11/25/2024"),
-    date: handleDate("11/26/2024"),
-    days: handleTime("11/25/2024 22:58", "11/26/2024 01:05"),
-    skills: ["html", "css"],
+    name: "Easybank landing",
+    link: "/easybank-landing",
+    pic: pic7,
+    dateStart: handleDate("11/27/2024"),
+    date: handleDate("11/27/2024"),
+    days: handleTime("11/27/2024 19:51", "11/27/2024 01:05"),
+    skills: ["html", "css", "js"],
   },
 ];
 
