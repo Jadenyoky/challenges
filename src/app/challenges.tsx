@@ -99,8 +99,8 @@ const challenges: Challenge[] = [
     link: "/easybank-landing",
     pic: pic7,
     dateStart: handleDate("11/27/2024"),
-    date: handleDate("11/27/2024"),
-    days: handleTime("11/27/2024 19:51", "11/27/2024 01:05"),
+    date: handleDate("11/29/2024"),
+    days: handleTime("11/27/2024 19:51", "11/29/2024 02:22"),
     skills: ["html", "css", "js"],
   },
 ];
