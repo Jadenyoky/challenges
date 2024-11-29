@@ -106,6 +106,7 @@ interface types {
     dateStart: string;
     date: string;
     days: string[];
+    from: string;
     skills: string[];
   };
   index: number;
@@ -130,7 +131,7 @@ const Challenge = ({ data, index }: types) => {
         <span>{index + 1 < 10 ? `0${index + 1}` : index + 1}</span>
 
         <p className="name">{data.name}</p>
-        <p className="date">{data.date}</p>
+        <p className="date">{data.from}</p>
         <p className="days">
           {data.days.map((time, index) => {
             return <span key={index}>{time ? time : "-"}</span>;
