@@ -6,6 +6,7 @@ import pic4 from "../assets/challenges-images/blog-card.jpg";
 import pic5 from "../assets/challenges-images/recipe-page.jpg";
 import pic6 from "../assets/challenges-images/feature-section.jpg";
 import pic7 from "../assets/challenges-images/easybank-landing.jpg";
+import pic8 from "../assets/challenges-images/results-summary.jpg";
 import { StaticImageData } from "next/image";
 import moment from "moment";
 
@@ -114,6 +115,16 @@ const challenges: Challenge[] = [
     from: handleFrom("11/29/2024"),
     days: handleTime("11/27/2024 19:51", "11/29/2024 02:22"),
     skills: ["html", "css", "js"],
+  },
+  {
+    name: "Results summary",
+    link: "/results-summary",
+    pic: pic8,
+    dateStart: handleDate("11/29/2024"),
+    date: handleDate("11/29/2024"),
+    from: handleFrom("11/29/2024"),
+    days: handleTime("11/29/2024 12:37", "11/29/2024 15:16"),
+    skills: ["html", "css"],
   },
 ];
 

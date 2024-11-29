@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+.page {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: 'Hanken Grotesk';
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px #d8dce8;
+    max-width: 90%;
+
+    .card {
+      /* border: 1px solid; */
+      width: 350px;
+      height: 450px;
+      padding: 30px;
+    }
+
+    .cardOne {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      /* background-color: #5d3efb; */
+      background: linear-gradient(to bottom, #5d3efb, #4233f0);
+      border-radius: inherit;
+      color: white;
+
+      .header {
+        opacity: 0.7;
+        font-size: 1.1rem;
+      }
+
+      .scoreContainer {
+        background: linear-gradient(to bottom,
+            #3d21ac, transparent);
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .score {
+          font-size: 3rem;
+          font-weight: 900;
+        }
+
+        .text {
+          opacity: 0.5;
+          font-size: 0.9rem;
+          margin-top: -5px;
+        }
+      }
+
+      .last {
+        /* margin-bottom: 10px; */
+
+        .word {
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+
+        .sub {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .cardTwo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+
+      .header {
+        color: black;
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      .info {
+        background-color: rgba(186, 54, 54, 0.187);
+        border-radius: 10px;
+        padding: 15px;
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+        gap: 10px;
+
+        .icon {}
+
+        .name {
+          flex: 1;
+          font-weight: 500;
+        }
+
+        .score {
+          color: grey;
+
+          .final {
+            color: black;
+            font-weight: 600;
+            margin-right: 3px;
+          }
+        }
+      }
+
+      .button {
+        background-color: #303b59;
+
+        padding: 10px;
+        border-radius: 50px;
+        color: white;
+        font-size: 1.1rem;
+        transition: 0.4s;
+
+        &:hover {
+          background-color: #4233f0;
+
+        }
+      }
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .page .container {
+    flex-direction: column;
+    border-radius: 0;
+    /* height: 100%; */
+    width: 100%;
+    max-width: 100%;
+
+    .card {
+      width: 100%;
+      height: auto;
+    }
+
+    .cardOne {
+      border-radius: 0 0 35px 35px;
+      gap: 50px;
+
+    }
+  }
+}
