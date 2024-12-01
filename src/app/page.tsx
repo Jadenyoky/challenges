@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import challenges from "./challenges";
@@ -41,6 +41,10 @@ const Page = () => {
 
   const sorted = _.orderBy(challenges, "dateStart", "desc");
 
+  const { scrollY } = useScroll();
+  const ss = useTransform(scrollY, [0, 100], [1, 0]);
+  const rr = useTransform(scrollY, [0, 100], [0, -60]);
+
   return (
     <main className="all">
       <motion.div
@@ -48,6 +52,11 @@ const Page = () => {
         variants={moving}
         initial="initial"
         animate="animate"
+        style={{
+          // opacity: ss,
+          // scale: ss,
+          translateY: rr,
+        }}
       >
         <motion.div className="background" variants={moving2} />
         <motion.div variants={moving3} className="text-header">
