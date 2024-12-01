@@ -9,6 +9,11 @@
   src: url("../assets/fonts/rafah.ttf");
 }
 
+@font-face {
+  font-family: zentry;
+  src: url("../assets/fonts/zentry.woff2");
+}
+
 :root {
   --green: #72fa93;
   --font: rafah;

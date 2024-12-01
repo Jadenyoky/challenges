@@ -149,7 +149,7 @@ const Challenge = ({ data, index }: types) => {
           handleOpen();
         }}
       >
-        <i className="fi fi-sr-square-info"></i> info
+        info
       </div>
 
       {showInfo && (

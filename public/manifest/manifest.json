@@ -1,6 +1,12 @@
 {
   "theme_color": "#333333",
   "background_color": "#333333",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Challenges Jaden",
+  "short_name": "Challenges",
+  "description": "Website collect my challenges to convert design to real web page in coding [html,css,js,react,next and many libraries when demand]",
   "icons": [
     {
       "purpose": "maskable",
@@ -14,12 +20,5 @@
       "src": "icon512_rounded.png",
       "type": "image/png"
     }
-  ],
-  "orientation": "portrait-primary",
-  "display": "standalone",
-  "dir": "auto",
-  "lang": "en-EG",
-  "name": "Challenges Jaden",
-  "short_name": "Challenges",
-  "start_url": "/"
+  ]
 }
