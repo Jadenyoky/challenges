@@ -18,7 +18,7 @@ const Back = () => {
             handleBack();
           }}
         >
-          <i className="fi fi-rr-angle-small-left"></i>
+          <i className="fi fi-sr-right"></i>
         </main>
       )}
     </>
