@@ -2,8 +2,8 @@
 import React from "react";
 import Styles from "./blog.module.css";
 import Image from "next/image";
-import pic1 from "../../assets/images/blog-card/illustration-article.svg";
-import pic2 from "../../assets/images/blog-card/image-avatar.webp";
+import pic1 from "/public/assets/images/blog-card/illustration-article.svg";
+import pic2 from "/public/assets/images/blog-card/image-avatar.webp";
 
 const Page = () => {
   return (

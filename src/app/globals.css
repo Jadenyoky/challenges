@@ -6,12 +6,12 @@
 
 @font-face {
   font-family: rafah;
-  src: url("../assets/fonts/rafah.ttf");
+  src: url("/assets/fonts/rafah.ttf");
 }
 
 @font-face {
   font-family: zentry;
-  src: url("../assets/fonts/zentry.woff2");
+  src: url("/assets/fonts/zentry.woff2");
 }
 
 :root {
@@ -51,13 +51,14 @@ body {
   position: sticky;
   top: 0;
   pointer-events: none;
-
+  --data: data-opa;
+  scale: var(--data);
   .background {
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-    background: url(../assets/images/grid.jpg) no-repeat;
+    background: url(/assets/images/grid.jpg) no-repeat;
     background-size: cover;
     opacity: 0.8;
   }
@@ -92,6 +93,7 @@ body {
   overflow: hidden;
   gap: 2px;
   border-radius: 20px;
+
   .challenge {
     position: relative;
     display: flex;
@@ -172,6 +174,7 @@ body {
       > img {
         opacity: 1;
         transform: scale(1) translateX(0);
+        object-fit: cover;
         aspect-ratio: 3 / 2;
       }
     }
@@ -231,7 +234,7 @@ body {
   left: 0px;
   height: 70px;
   width: 70px;
-  background: url(../assets/images/grid.jpg) center center / cover;
+  background: url(/assets/images/grid.jpg) center center / cover;
   opacity: 0.3;
   cursor: pointer;
   transition: all 0.3s;
@@ -289,7 +292,7 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    background: url(../assets/images/grid.jpg) center center / cover;
+    background: url(/assets/images/grid.jpg) center center / cover;
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -351,7 +354,7 @@ body {
     color: var(--green);
     margin: 20px;
     background: linear-gradient(rgba(27, 26, 26, 0.8), rgba(27, 26, 26, 0.9)),
-      url(../assets/images/grid.jpg) no-repeat center center / cover;
+      url(/assets/images/grid.jpg) no-repeat center center / cover;
 
     .header {
       margin-top: 10px;

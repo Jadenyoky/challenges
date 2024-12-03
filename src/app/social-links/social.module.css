@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'Inter bold';
-  src: url(../../assets/fonts/social-links/Inter-Bold.ttf);
+  font-family: "Inter bold";
+  src: url(/assets/fonts/social-links/Inter-Bold.ttf);
 }
 
 @font-face {
-  font-family: 'Inter regular';
-  src: url(../../assets/fonts/social-links/Inter-Regular.ttf);
+  font-family: "Inter regular";
+  src: url(/assets/fonts/social-links/Inter-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Inter semi';
-  src: url(../../assets/fonts/social-links/Inter-SemiBold.ttf);
+  font-family: "Inter semi";
+  src: url(/assets/fonts/social-links/Inter-SemiBold.ttf);
 }
 
 .container {
@@ -22,7 +22,6 @@
   color: white;
   padding: 24px;
   background-color: #141414;
-
 
   >.card {
     padding: 20px 30px 20px 30px;
@@ -36,7 +35,6 @@
     overflow: auto;
     height: 100%;
 
-
     .avatar {
       align-self: center;
 
@@ -48,20 +46,20 @@
 
     .text_1 {
       font-size: 1.5rem;
-      font-family: 'Inter bold';
+      font-family: "Inter bold";
 
       .plus {
         display: block;
         font-size: 0.9rem;
         color: #c4f82a;
-        font-family: 'Inter semi';
+        font-family: "Inter semi";
         transform: translateY(10px);
       }
     }
 
     .text_2 {
       font-size: 1rem;
-      font-family: 'Inter regular';
+      font-family: "Inter regular";
       transform: translateY(10px);
     }
 
@@ -76,7 +74,7 @@
         border-radius: 8px;
         text-decoration-line: none;
         color: white;
-        font-family: 'Inter semi';
+        font-family: "Inter semi";
         transition: background-color 0.3s ease-in-out;
 
         &:hover {
@@ -86,5 +84,4 @@
       }
     }
   }
-
 }

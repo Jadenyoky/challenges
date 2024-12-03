@@ -1,22 +1,35 @@
+"use client";
 import "./globals.css";
 import Prev from "./(components)/back";
-import { Metadata } from "next";
+import { usePathname } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Challenges",
-  description: "A collection of challenges by Jaden",
-  manifest: "/manifest/manifest.json",
-};
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const handleTitle = () => {
+    const newTitle = pathname
+      .replace(/[/-]/g, " ")
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+    return pathname === "/" ? "Challenges" : `${newTitle} | Challenges`;
+  };
+
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <link rel="manifest" href="/manifest/manifest.json" />
+        <meta
+          name="description"
+          content="A collection of challenges by Jaden"
+        />
+        <title>{handleTitle()}</title>
+      </head>
       <body>
-        {/* {pathname !== "/" && <Prev />} */}
         <Prev />
         {children}
       </body>

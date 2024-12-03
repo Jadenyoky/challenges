@@ -1,6 +1,19 @@
-.masonry {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  break-inside: avoid;
+.masonry {}
+
+.my-masonry-grid {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 10px;
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+}
+
+.my-masonry-grid_column {
+  width: auto !important;
 }

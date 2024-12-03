@@ -1,27 +1,26 @@
 @font-face {
   font-family: "sans medium";
-  src: url(../../assets/fonts/bento-grid/DMSans-Medium.ttf);
+  src: url(/assets/fonts/bento-grid/DMSans-Medium.ttf);
 }
 
 @font-face {
   font-family: "sans italic";
-  src: url(../../assets/fonts/bento-grid/DMSans-MediumItalic.ttf);
+  src: url(/assets/fonts/bento-grid/DMSans-MediumItalic.ttf);
 }
 
 @font-face {
   font-family: "sans regular";
-  src: url(../../assets/fonts/bento-grid/DMSans-Regular.ttf);
+  src: url(/assets/fonts/bento-grid/DMSans-Regular.ttf);
 }
 
 @font-face {
   font-family: "sans italic var";
-  src: url(../../assets/fonts/bento-grid/DMSans-Italic-VariableFont_opsz\,wght.ttf);
-
+  src: url(/assets/fonts/bento-grid/DMSans-Italic-VariableFont_opsz\,wght.ttf);
 }
 
 @font-face {
   font-family: "sans italic var 2";
-  src: url(../../assets/fonts/bento-grid/DMSans-VariableFont_opsz\,wght.ttf);
+  src: url(/assets/fonts/bento-grid/DMSans-VariableFont_opsz\,wght.ttf);
 }
 
 .container {
@@ -38,20 +37,13 @@
     "one one one two two two two two two three three three"
     "one one one two two two two two two three three three"
     "one one one two two two two two two three three three"
-
     "one one one five five five six six six three three three"
-
     "four four four five five five six six six three three three"
     "four four four five five five six six six three three three"
-
     "four four four five five five six six six three three three"
-
     "four four four seven seven seven eight eight eight eight eight eight"
     "four four four seven seven seven eight eight eight eight eight eight"
-    "four four four seven seven seven eight eight eight eight eight eight"
-
-
-  ;
+    "four four four seven seven seven eight eight eight eight eight eight";
 
   .card {
     padding: 20px;
@@ -74,15 +66,15 @@
     line-height: 1;
     gap: 10px;
 
-    >.text_1 {
+    > .text_1 {
       letter-spacing: -2px;
       font-weight: 500;
-      font-family: 'sans italic var 2';
+      font-family: "sans italic var 2";
       font-size: 2.5rem;
 
-      >.plus {
+      > .plus {
         color: #7f5fca;
-        font-family: 'sans italic var';
+        font-family: "sans italic var";
       }
     }
 
@@ -101,21 +93,18 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    font-family: 'sans regular';
+    font-family: "sans regular";
 
-    >.text_1 {
-      font: 3rem 'sans regular';
+    > .text_1 {
+      font: 3rem "sans regular";
       text-align: center;
       line-height: 1;
       letter-spacing: -2px;
 
-
-      >.plus {
+      > .plus {
         color: #fecc77;
       }
     }
-
-
 
     .text_2 {
       color: #d2c2ee;
@@ -126,7 +115,7 @@
       gap: 5px;
       font-size: 20px;
 
-      >.image1 {
+      > .image1 {
         width: 200px;
         max-width: 100%;
       }
@@ -147,27 +136,24 @@
 
     color: #221f1a;
 
-    >.text_1 {
-      font: 2rem 'sans regular';
+    > .text_1 {
+      font: 2rem "sans regular";
       letter-spacing: -1px;
       line-height: 0.9;
-
     }
 
-    >.image {
-
+    > .image {
       width: 300px;
       height: 270px;
       transform: translateX(70px);
 
       .image1 {
         width: 100%;
-
       }
     }
 
-    >.text_2 {
-      font: 1rem 'sans regular';
+    > .text_2 {
+      font: 1rem "sans regular";
     }
   }
 
@@ -185,14 +171,14 @@
     position: relative;
     overflow: hidden;
 
-    >.text_1 {
+    > .text_1 {
       letter-spacing: -2px;
       font-size: 2rem;
-      font-family: 'sans italic var 2';
+      font-family: "sans italic var 2";
       line-height: 0.9;
     }
 
-    >.image1 {
+    > .image1 {
       width: 220px;
       max-width: 100%;
       object-fit: contain;
@@ -212,14 +198,14 @@
     gap: 20px;
     color: #221f1a;
 
-    >.text_1 {
+    > .text_1 {
       letter-spacing: -1px;
       font-size: 1.7rem;
-      font-family: 'sans italic var 2';
+      font-family: "sans italic var 2";
       line-height: 0.9;
     }
 
-    >.image {
+    > .image {
       transform: translateX(50px);
       right: -70px;
 
@@ -243,15 +229,15 @@
     gap: 20px;
     overflow: hidden;
 
-    >.text_1 {
+    > .text_1 {
       letter-spacing: -1px;
       font-size: 2rem;
-      font-family: 'sans italic var 2';
+      font-family: "sans italic var 2";
       line-height: 0.9;
       color: #221f1a;
     }
 
-    >.image1 {
+    > .image1 {
       align-self: center;
       max-width: 90%;
     }
@@ -268,15 +254,15 @@
     overflow: hidden;
     justify-content: center;
 
-    >.text_1 {
+    > .text_1 {
       font-size: 1rem;
       letter-spacing: -1px;
-      font-family: 'sans italic var 2';
+      font-family: "sans italic var 2";
       line-height: 0.9;
       color: #221f1a;
       text-wrap: nowrap;
 
-      >.plus {
+      > .plus {
         font-size: 3rem;
         color: #221f1a;
         display: block;
@@ -285,7 +271,7 @@
       }
     }
 
-    >.image1 {
+    > .image1 {
       align-self: center;
       width: 150px;
     }
@@ -304,21 +290,19 @@
     justify-content: center;
     align-items: center;
 
-    >.text_1 {
+    > .text_1 {
       color: #ffffff;
       font-size: 2rem;
       letter-spacing: -1px;
-      font-family: 'sans italic var 2';
+      font-family: "sans italic var 2";
       line-height: 0.9;
     }
 
-    >.image1 {
+    > .image1 {
       width: 150px;
     }
   }
-
 }
-
 
 @media screen and (max-width: 768px) {
   .container {
@@ -339,76 +323,70 @@
     .card_2 {
       gap: 30px;
 
-      >.text_1 {
+      > .text_1 {
         font-size: 2rem;
       }
 
-      >.text_2 {
+      > .text_2 {
         font-size: 1rem;
 
-        >.image1 {
+        > .image1 {
           width: 170px;
           max-width: 100%;
-
         }
       }
     }
 
     .card_3 {
-
-      >.text_1 {
+      > .text_1 {
         font-size: 1.5rem;
-
       }
 
-      >.image {
+      > .image {
         max-width: 70%;
         height: auto;
         transform: translateX(0);
       }
 
-      >.text_2 {
-        font: 1rem 'sans regular';
+      > .text_2 {
+        font: 1rem "sans regular";
         text-align: center;
       }
     }
 
-
     .card_4 {
-      >.text_1 {
+      > .text_1 {
         font-size: 2rem;
       }
     }
-
 
     .card_5 {
       justify-content: center;
       align-items: center;
 
-      >.text_1 {
+      > .text_1 {
         letter-spacing: -1px;
         font-size: 1.7rem;
-        font-family: 'sans italic var 2';
+        font-family: "sans italic var 2";
         line-height: 0.9;
         margin-top: 0;
         align-self: baseline;
       }
 
-      >.image {
+      > .image {
         transform: translateX(0);
       }
     }
-
 
     .card_6 {
       gap: 0;
       overflow: hidden;
 
-      >.text_1 {
+      > .text_1 {
         font-size: 2rem;
       }
 
-      >.image1 {
+      > .image1 {
         transform: translateY(21px);
         width: 250px;
         max-width: 60%;
@@ -417,7 +395,7 @@
     }
 
     .card_7 {
-      >.image1 {
+      > .image1 {
         width: 200px;
       }
     }
@@ -425,10 +403,9 @@
     .card_8 {
       flex-direction: column;
 
-      >.image1 {
+      > .image1 {
         width: 200px;
       }
     }
-
   }
 }

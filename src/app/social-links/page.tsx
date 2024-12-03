@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import pic1 from "../../assets/images/social-links/avatar-jessica.jpeg";
+import pic1 from "/public/assets/images/social-links/avatar-jessica.jpeg";
 import Styles from "./social.module.css";
 import Link from "next/link";
 const Page = () => {

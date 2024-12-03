@@ -2,7 +2,7 @@
 import React from "react";
 import Styles from "./qr.module.css";
 import Image from "next/image";
-import pic1 from "../../assets/images/qr-code/image-qr-code.png";
+import pic1 from "/public/assets/images/qr-code/image-qr-code.png";
 
 const Page = () => {
   return (

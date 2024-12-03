@@ -2,21 +2,21 @@
 import React, { useState } from "react";
 import Styles from "./landing.module.css";
 import Image from "next/image";
-import logo from "../../assets/images/easybank-landing/logo.svg";
-import logoWhite from "../../assets/images/easybank-landing/logo-white.svg";
-import menuIcon from "../../assets/images/easybank-landing/icon-hamburger.svg";
-import closeIcon from "../../assets/images/easybank-landing/icon-close.svg";
-import introDesktop from "../../assets/images/easybank-landing/bg-intro-desktop.svg";
-import mockups from "../../assets/images/easybank-landing/image-mockups.png";
-import introMobile from "../../assets/images/easybank-landing/bg-intro-mobile.svg";
-import card1 from "../../assets/images/easybank-landing/icon-online.svg";
-import card2 from "../../assets/images/easybank-landing/icon-budgeting.svg";
-import card3 from "../../assets/images/easybank-landing/icon-onboarding.svg";
-import card4 from "../../assets/images/easybank-landing/icon-api.svg";
-import article1 from "../../assets/images/easybank-landing/image-currency.jpg";
-import article2 from "../../assets/images/easybank-landing/image-restaurant.jpg";
-import article3 from "../../assets/images/easybank-landing/image-plane.jpg";
-import article4 from "../../assets/images/easybank-landing/image-confetti.jpg";
+import logo from "/public/assets/images/easybank-landing/logo.svg";
+import logoWhite from "/public/assets/images/easybank-landing/logo-white.svg";
+import menuIcon from "/public/assets/images/easybank-landing/icon-hamburger.svg";
+import closeIcon from "/public/assets/images/easybank-landing/icon-close.svg";
+import introDesktop from "/public/assets/images/easybank-landing/bg-intro-desktop.svg";
+import mockups from "/public/assets/images/easybank-landing/image-mockups.png";
+import introMobile from "/public/assets/images/easybank-landing/bg-intro-mobile.svg";
+import card1 from "/public/assets/images/easybank-landing/icon-online.svg";
+import card2 from "/public/assets/images/easybank-landing/icon-budgeting.svg";
+import card3 from "/public/assets/images/easybank-landing/icon-onboarding.svg";
+import card4 from "/public/assets/images/easybank-landing/icon-api.svg";
+import article1 from "/public/assets/images/easybank-landing/image-currency.jpg";
+import article2 from "/public/assets/images/easybank-landing/image-restaurant.jpg";
+import article3 from "/public/assets/images/easybank-landing/image-plane.jpg";
+import article4 from "/public/assets/images/easybank-landing/image-confetti.jpg";
 
 const Page = () => {
   const [navMobile, setnavMobile] = useState<boolean>(false);

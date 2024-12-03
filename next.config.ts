@@ -11,4 +11,8 @@ const withPWA = withPWAInit({
   },
 });
 
-export default withPWA();
+const nextConfig = {
+  reactStrictMode: true,
+};
+
+export default withPWA(nextConfig);

@@ -2,10 +2,10 @@
 import React from "react";
 import Styles from "./section.module.css";
 import Image from "next/image";
-import pic1 from "../../assets/images/feature-section/icon-supervisor.svg";
-import pic2 from "../../assets/images/feature-section/icon-team-builder.svg";
-import pic3 from "../../assets/images/feature-section/icon-karma.svg";
-import pic4 from "../../assets/images/feature-section/icon-calculator.svg";
+import pic1 from "/public/assets/images/feature-section/icon-supervisor.svg";
+import pic2 from "/public/assets/images/feature-section/icon-team-builder.svg";
+import pic3 from "/public/assets/images/feature-section/icon-karma.svg";
+import pic4 from "/public/assets/images/feature-section/icon-calculator.svg";
 
 const Page = () => {
   const cards = [
@@ -34,7 +34,7 @@ const Page = () => {
       image: pic4,
     },
   ];
-  
+
   return (
     <main className={Styles.page}>
       <div className={Styles.topPart}>

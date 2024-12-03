@@ -2,14 +2,14 @@
 import React from "react";
 import Styles from "./bento.module.css";
 import Image from "next/image";
-import pic1 from "../../assets/images/bento-grid/01- create.webp";
-import pic2 from "../../assets/images/bento-grid/02- social.webp";
-import pic3 from "../../assets/images/bento-grid/03- shedule.webp";
-import pic4 from "../../assets/images/bento-grid/04- write.webp";
-import pic5 from "../../assets/images/bento-grid/05- manage.webp";
-import pic6 from "../../assets/images/bento-grid/06- maintain.webp";
-import pic7 from "../../assets/images/bento-grid/07- faster.webp";
-import pic8 from "../../assets/images/bento-grid/08- grow.webp";
+import pic1 from "/public/assets/images/bento-grid/01- create.webp";
+import pic2 from "/public/assets/images/bento-grid/02- social.webp";
+import pic3 from "/public/assets/images/bento-grid/03- shedule.webp";
+import pic4 from "/public/assets/images/bento-grid/04- write.webp";
+import pic5 from "/public/assets/images/bento-grid/05- manage.webp";
+import pic6 from "/public/assets/images/bento-grid/06- maintain.webp";
+import pic7 from "/public/assets/images/bento-grid/07- faster.webp";
+import pic8 from "/public/assets/images/bento-grid/08- grow.webp";
 
 const Page = () => {
   return (

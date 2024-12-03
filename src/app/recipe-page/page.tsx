@@ -2,7 +2,7 @@
 import React from "react";
 import Styles from "./page.module.css";
 import Image from "next/image";
-import pic1 from "../../assets/images/recipe-page/image-omelette.jpeg";
+import pic1 from "/public/assets/images/recipe-page/image-omelette.jpeg";
 
 const Page = () => {
   const time = [

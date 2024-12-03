@@ -2,11 +2,10 @@
 import React, { useEffect } from "react";
 import Styles from "./page.module.css";
 import Image from "next/image";
-import pic1 from "../../assets/images/results-summary/icon-reaction.svg";
-import pic2 from "../../assets/images/results-summary/icon-memory.svg";
-import pic3 from "../../assets/images/results-summary/icon-verbal.svg";
-import pic4 from "../../assets/images/results-summary/icon-visual.svg";
-
+import pic1 from "/public/assets/images/results-summary/icon-reaction.svg";
+import pic2 from "/public/assets/images/results-summary/icon-memory.svg";
+import pic3 from "/public/assets/images/results-summary/icon-verbal.svg";
+import pic4 from "/public/assets/images/results-summary/icon-visual.svg";
 const Page = () => {
   const data = [
     {

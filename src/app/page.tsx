@@ -13,8 +13,8 @@ import {
   moving7,
   moving8,
 } from "./anime";
-import logo from "../assets/images/challenge.png";
-import { useState } from "react";
+import logo from "/public/assets/images/challenge.png";
+import { useEffect, useState } from "react";
 import _ from "lodash";
 
 const Page = () => {
@@ -39,11 +39,9 @@ const Page = () => {
 
   const year = new Date().getFullYear();
 
-  const sorted = _.orderBy(challenges, "dateStart", "desc");
+  const sorted = _.orderBy(challenges, "id", "desc");
 
   const { scrollY } = useScroll();
-  const ss = useTransform(scrollY, [0, 100], [1, 0]);
-  const rr = useTransform(scrollY, [0, 100], [0, -60]);
 
   return (
     <main className="all">
@@ -52,18 +50,12 @@ const Page = () => {
         variants={moving}
         initial="initial"
         animate="animate"
-        style={{
-          // opacity: ss,
-          // scale: ss,
-          translateY: rr,
-        }}
       >
         <motion.div className="background" variants={moving2} />
         <motion.div variants={moving3} className="text-header">
           <Image alt="logo" src={logo} /> Challenges By <span>Jaden</span>
         </motion.div>
       </motion.div>
-
       <motion.div
         variants={moving4}
         initial="initial"
@@ -74,7 +66,6 @@ const Page = () => {
           return <Challenge key={index} data={challenge} index={index} />;
         })}
       </motion.div>
-
       <motion.div
         variants={moving6}
         initial="initial"
@@ -109,6 +100,7 @@ const Page = () => {
 
 interface types {
   data: {
+    id: number;
     name: string;
     link: string;
     pic: StaticImageData;

@@ -1,16 +1,18 @@
 "use client";
-import pic1 from "../assets/challenges-images/bento-grid.jpg";
-import pic2 from "../assets/challenges-images/social-links.jpg";
-import pic3 from "../assets/challenges-images/qr-code.jpg";
-import pic4 from "../assets/challenges-images/blog-card.jpg";
-import pic5 from "../assets/challenges-images/recipe-page.jpg";
-import pic6 from "../assets/challenges-images/feature-section.jpg";
-import pic7 from "../assets/challenges-images/easybank-landing.jpg";
-import pic8 from "../assets/challenges-images/results-summary.jpg";
+import pic1 from "/public/assets/challenges-images/bento-grid.jpg";
+import pic2 from "/public/assets/challenges-images/social-links.jpg";
+import pic3 from "/public/assets/challenges-images/qr-code.jpg";
+import pic4 from "/public/assets/challenges-images/blog-card.jpg";
+import pic5 from "/public/assets/challenges-images/recipe-page.jpg";
+import pic6 from "/public/assets/challenges-images/feature-section.jpg";
+import pic7 from "/public/assets/challenges-images/easybank-landing.jpg";
+import pic8 from "/public/assets/challenges-images/results-summary.jpg";
+import pic9 from "/public/assets/challenges-images/huddle-section.jpg";
 import { StaticImageData } from "next/image";
 import moment from "moment";
 
 type Challenge = {
+  id: number;
   name: string;
   link: string;
   pic: StaticImageData;
@@ -47,6 +49,7 @@ const handleFrom = (date: string) => {
 
 const challenges: Challenge[] = [
   {
+    id: 1,
     name: "Bento Grid",
     link: "/bento-grid",
     pic: pic1,
@@ -57,6 +60,7 @@ const challenges: Challenge[] = [
     skills: ["html", "css"],
   },
   {
+    id: 2,
     name: "Social Links",
     link: "/social-links",
     pic: pic2,
@@ -67,6 +71,7 @@ const challenges: Challenge[] = [
     skills: ["html", "css"],
   },
   {
+    id: 3,
     name: "Qr Code",
     link: "/qr-code",
     pic: pic3,
@@ -77,6 +82,7 @@ const challenges: Challenge[] = [
     skills: ["html", "css"],
   },
   {
+    id: 4,
     name: "Blog card",
     link: "/blog-card",
     pic: pic4,
@@ -87,6 +93,7 @@ const challenges: Challenge[] = [
     skills: ["html", "css"],
   },
   {
+    id: 5,
     name: "Recipe page",
     link: "/recipe-page",
     pic: pic5,
@@ -97,6 +104,7 @@ const challenges: Challenge[] = [
     skills: ["html", "css"],
   },
   {
+    id: 6,
     name: "Feature section",
     link: "/feature-section",
     pic: pic6,
@@ -107,6 +115,7 @@ const challenges: Challenge[] = [
     skills: ["html", "css"],
   },
   {
+    id: 7,
     name: "Easybank landing",
     link: "/easybank-landing",
     pic: pic7,
@@ -117,6 +126,7 @@ const challenges: Challenge[] = [
     skills: ["html", "css", "js"],
   },
   {
+    id: 8,
     name: "Results summary",
     link: "/results-summary",
     pic: pic8,
@@ -124,6 +134,17 @@ const challenges: Challenge[] = [
     from: handleFrom("11/29/2024 12:37"),
     date: handleDate("11/29/2024"),
     days: handleTime("11/29/2024 12:37", "11/29/2024 15:16"),
+    skills: ["html", "css"],
+  },
+  {
+    id: 9,
+    name: "Huddle section",
+    link: "/huddle-section",
+    pic: pic9,
+    dateStart: handleDate("12/03/2024"),
+    from: handleFrom("12/03/2024 14:20"),
+    date: handleDate("12/03/2024"),
+    days: handleTime("12/03/2024 14:20", "12/03/2024 15:15"),
     skills: ["html", "css"],
   },
 ];
