@@ -30,7 +30,7 @@ export default function RootLayout({
         <title>{handleTitle()}</title>
       </head>
       <body>
-        <Prev />
+        {pathname !== "/" && <Prev />}
         {children}
       </body>
     </html>

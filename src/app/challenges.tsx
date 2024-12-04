@@ -8,6 +8,7 @@ import pic6 from "/public/assets/challenges-images/feature-section.jpg";
 import pic7 from "/public/assets/challenges-images/easybank-landing.jpg";
 import pic8 from "/public/assets/challenges-images/results-summary.jpg";
 import pic9 from "/public/assets/challenges-images/huddle-section.jpg";
+import pic10 from "/public/assets/challenges-images/age-calculator.jpg";
 import { StaticImageData } from "next/image";
 import moment from "moment";
 
@@ -146,6 +147,17 @@ const challenges: Challenge[] = [
     date: handleDate("12/03/2024"),
     days: handleTime("12/03/2024 14:20", "12/03/2024 15:15"),
     skills: ["html", "css"],
+  },
+  {
+    id: 10,
+    name: "Age calculator",
+    link: "/age-calculator",
+    pic: pic10,
+    dateStart: handleDate("12/03/2024"),
+    from: handleFrom("12/03/2024 23:00"),
+    date: handleDate("12/04/2024"),
+    days: handleTime("12/03/2024 23:00", "12/04/2024 22:25"),
+    skills: ["html", "css", "js"],
   },
 ];
 
