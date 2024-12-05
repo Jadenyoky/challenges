@@ -60,7 +60,7 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(#333333, rgba(0, 0, 0, 0.133)), var(--bg) no-repeat;
+    background: linear-gradient(#333333, rgba(0, 0, 0, 0.502)), var(--bg) no-repeat;
     background-size: cover;
     z-index: -1;
     border-radius: inherit;
