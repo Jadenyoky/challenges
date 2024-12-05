@@ -1,5 +1,5 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import challenges from "./challenges";
@@ -14,7 +14,7 @@ import {
   moving8,
 } from "./anime";
 import logo from "/public/assets/images/challenge.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import _ from "lodash";
 
 const Page = () => {
@@ -40,8 +40,6 @@ const Page = () => {
   const year = new Date().getFullYear();
 
   const sorted = _.orderBy(challenges, "id", "desc");
-
-  const { scrollY } = useScroll();
 
   return (
     <main className="all">
@@ -141,7 +139,7 @@ const Challenge = ({ data, index }: types) => {
 
         <div className="highlight" />
 
-        <Image alt={data.name} src={data.pic} />
+        <Image alt={data.name} src={data.pic} loading="lazy" />
       </Link>
 
       <div
