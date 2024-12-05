@@ -7,11 +7,13 @@
 @font-face {
   font-family: rafah;
   src: url("/assets/fonts/rafah.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: zentry;
   src: url("/assets/fonts/zentry.woff2");
+  font-display: swap;
 }
 
 :root {
