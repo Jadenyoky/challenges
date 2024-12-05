@@ -19,6 +19,7 @@
 :root {
   --green: #72fa93;
   --font: rafah;
+  --bg: url(/assets/images/grid.svg);
 }
 
 * {
@@ -53,17 +54,17 @@ body {
   position: sticky;
   top: 0;
   pointer-events: none;
-  --data: data-opa;
-  scale: var(--data);
 
   .background {
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-    background: url(/assets/images/grid.jpg) no-repeat;
+    background: linear-gradient(#333333, rgba(0, 0, 0, 0.133)),
+      linear-gradient(transparent, #33333358), var(--bg) no-repeat;
     background-size: cover;
-    opacity: 0.8;
+    z-index: -1;
+    border-radius: inherit;
   }
 
   .text-header {
@@ -168,7 +169,7 @@ body {
       >.highlight {
         position: absolute;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.502);
+        background-color: rgba(0, 0, 0, 0.6);
         height: 100%;
         width: 100%;
         z-index: 1;
@@ -237,7 +238,7 @@ body {
   left: -10px;
   height: 40px;
   width: 40px;
-  /* background: url(/assets/images/grid.jpg) center center / cover; */
+  /* background: var(--bg) center center / cover; */
   opacity: 0.3;
   cursor: pointer;
   transition: all 0.3s;
@@ -303,7 +304,9 @@ body {
   background: linear-gradient(to top,
       rgb(37, 37, 37),
       rgba(37, 37, 37, 0.597),
-      transparent);
+      transparent),
+    linear-gradient(to top, rgb(37, 37, 37), rgba(37, 37, 37, 0.597), transparent), var(--bg) center center / cover;
+
   padding: 10px 20px;
   display: grid;
   place-items: center;
@@ -311,17 +314,6 @@ body {
   font-size: 1.5rem;
   gap: 15px;
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    background: url(/assets/images/grid.jpg) center center / cover;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.5;
-  }
 
   .social {
     display: flex;
@@ -378,7 +370,7 @@ body {
     color: var(--green);
     margin: 20px;
     background: linear-gradient(rgba(27, 26, 26, 0.8), rgba(27, 26, 26, 0.9)),
-      url(/assets/images/grid.jpg) no-repeat center center / cover;
+      var(--bg) no-repeat center center / cover;
 
     .header {
       margin-top: 10px;
