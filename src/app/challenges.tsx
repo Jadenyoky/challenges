@@ -157,7 +157,7 @@ const challenges: Challenge[] = [
     from: handleFrom("12/03/2024 23:00"),
     date: handleDate("12/04/2024"),
     days: handleTime("12/03/2024 23:00", "12/04/2024 22:25"),
-    skills: ["html", "css", "js"],
+    skills: ["html", "css", "js", "react"],
   },
 ];
 

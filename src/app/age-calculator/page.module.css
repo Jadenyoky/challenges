@@ -7,6 +7,42 @@
   justify-content: center;
   align-items: center;
 
+  .mode {
+    position: absolute;
+    top: 20px;
+    background-color: hsl(259, 100%, 65%);
+
+    padding: 0px 20px;
+    border-radius: 8px;
+    color: white;
+    font-family: rafah;
+    font-size: 1.5rem;
+    font-feature-settings: "aalt";
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0px 0px 0px black;
+
+    &:hover {
+      background-color: black;
+      box-shadow: 10px 10px 1px hsl(259, 100%, 65%);
+    }
+
+    @media screen and (max-width: 768px) {
+      &:hover {
+        background-color: hsl(259, 100%, 65%);
+        box-shadow: 0px 0px 0px black;
+      }
+
+      &:active {
+        background-color: black;
+        box-shadow: 10px 10px 1px hsl(259, 100%, 65%);
+      }
+    }
+  }
+
   .container {
     background-color: white;
     height: 70vh;
@@ -116,8 +152,22 @@
           }
         }
 
-        &:hover {
+        &:disabled {
+          background-color: hsl(260, 52%, 71%);
+        }
+
+        &:hover:not(:disabled) {
           background-color: black;
+        }
+
+        @media screen and (max-width: 768px) {
+          &:hover:not(:disabled) {
+            background-color: hsl(259, 100%, 65%);
+          }
+
+          &:active:not(:disabled) {
+            background-color: black;
+          }
         }
       }
     }
@@ -176,11 +226,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        &:hover {
+        &:hover:not(:disabled) {
           background-color: hsl(259, 100%, 65%);
         }
 
-        &:active {
+        &:active:not(:disabled) {
           background-color: black;
         }
       }

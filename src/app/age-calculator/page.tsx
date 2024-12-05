@@ -13,6 +13,22 @@ const Page = () => {
   const [monthError, setmonthError] = useState<string>("");
   const [yearError, setyearError] = useState<string>("");
 
+  const [mode, setMode] = useState<string>("normal");
+
+  const switchMode = () => {
+    switch (mode) {
+      case "normal":
+        setMode("dynamic");
+        break;
+      case "dynamic":
+        setMode("normal");
+        break;
+      default:
+        setMode("dynamic");
+        break;
+    }
+  };
+
   const handleAge = () => {
     const word: any = document.querySelectorAll(".word");
     const input: any = document.querySelectorAll("input");
@@ -25,13 +41,13 @@ const Page = () => {
 
     const date = moment(
       `${day.value}/${month.value}/${year.value}`,
-      "DD/MM/YYYY"
+      "D/M/Y",
+      true
     );
 
     const today = moment().format();
     const valid = date.isValid();
     const future = date.isAfter(today);
-    console.log(valid);
 
     const check = () => {
       const dayValue = Number(day.value);
@@ -143,17 +159,37 @@ const Page = () => {
     result();
   };
 
+  const dynamicMode = () => {
+    if (mode === "dynamic") {
+      handleAge();
+    }
+  };
+
   const moving = {
     initial: {
       opacity: 0,
+      y: -50,
     },
     animate: {
       opacity: 1,
+      y: 0,
     },
   };
 
   return (
     <main className={Styles.page}>
+      <motion.button
+        key={mode}
+        variants={moving}
+        initial="initial"
+        animate="animate"
+        className={Styles.mode}
+        onClick={() => {
+          switchMode();
+        }}
+      >
+        {mode}
+      </motion.button>
       <section className={Styles.container}>
         <ul className={Styles.inputs}>
           <li className={Styles.input}>
@@ -163,6 +199,9 @@ const Page = () => {
               type="number"
               placeholder="dd"
               min={1}
+              onChange={() => {
+                dynamicMode();
+              }}
             />
             <span className={Styles.error}>{dayError}</span>
           </li>
@@ -173,6 +212,9 @@ const Page = () => {
               type="number"
               placeholder="mm"
               min={1}
+              onChange={() => {
+                dynamicMode();
+              }}
             />
             <span className={Styles.error}>{monthError}</span>
           </li>
@@ -182,14 +224,18 @@ const Page = () => {
               className={Styles.three}
               type="number"
               placeholder="yyyy"
-              min={0}
+              onChange={() => {
+                dynamicMode();
+              }}
             />
             <span className={Styles.error}>{yearError}</span>
           </li>
         </ul>
+
         <div className={Styles.divider}>
           <div className={Styles.line} />
-          <div
+          <button
+            disabled={mode === "dynamic" ? true : false}
             className={Styles.button}
             onClick={() => {
               handleAge();
@@ -211,8 +257,9 @@ const Page = () => {
                 <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
               </g>
             </svg>
-          </div>
+          </button>
         </div>
+
         <ul className={Styles.result}>
           <li className={Styles.status}>
             <motion.p
