@@ -1,5 +1,5 @@
 "use client";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import challenges from "./challenges";
@@ -40,6 +40,8 @@ const Page = () => {
   const year = new Date().getFullYear();
 
   const sorted = _.orderBy(challenges, "id", "desc");
+
+  
 
   return (
     <main className="all">

@@ -17,3 +17,36 @@
 .my-masonry-grid_column {
   width: auto !important;
 }
+
+
+@keyframes fade-in-up-big {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-keyframes-fade-in-up-big {
+  animation: 1s fade-in-up-big;
+}
+
+@keyframes fade-in-up-big2 {
+  from {
+    opacity: 0;
+    transform: translate(0, 2000px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.animate-keyframes-fade-in-up-big2 {
+  animation: 1s fade-in-up-big2;
+}

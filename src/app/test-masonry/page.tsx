@@ -40,6 +40,11 @@ const Page = () => {
     <div className="masonry">
       <button onClick={() => fetchData()}>Load More</button>
       <button onClick={() => shuffle()}>Load More shuffle</button>
+      <div className=" h-screen gap-5  text-center bg-gray-950 text-blue-300 text-3xl flex justify-center items-center">
+        <p className="">hellow</p>
+        <p className="animate-keyframes-fade-in-up-big">hellow</p>
+        <p className="animate-keyframes-fade-in-up-big2">hellow2</p>
+      </div>
       <Masonry
         className="my-masonry-grid"
         breakpointCols={{ default: 1, 1100: 3, 700: 2, 500: 1 }}
