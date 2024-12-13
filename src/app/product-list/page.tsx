@@ -88,6 +88,14 @@ const Page = () => {
     return totalInDollar;
   };
 
+  const totalCartQuantity = () => {
+    const sum = addList.reduce((acc: number, item: types) => {
+      return acc + item.quantity;
+    }, 0);
+
+    return sum;
+  };
+
   const handleModal = () => {
     setmodal(!modal);
   };
@@ -113,7 +121,7 @@ const Page = () => {
         </div>
         <div className={`${Styles.cart}`}>
           <header className={`${Styles.header}`}>
-            Your Cart ({addList.length})
+            Your Cart ({totalCartQuantity()})
           </header>
           {addList.length <= 0 ? (
             <div className={`${Styles.empty}`}>
@@ -281,12 +289,7 @@ const Modal = ({
       />
       <motion.div
         variants={moving2}
-        className="border bg-white
-      w-full max-h-[80%] rounded-[12px_12px_0_0] p-6 flex flex-col justify-between 
-      z-[3] gap-6 font-[redhat] overflow-auto
-      self-end
-      md:w-[500px] md:self-center md:rounded-xl
-      "
+        className="border bg-white w-full max-h-[80%] rounded-[12px_12px_0_0] p-6 flex flex-col justify-between z-[3] gap-6 font-[redhat] overflow-auto self-end md:w-[500px] md:self-center md:rounded-xl"
       >
         <motion.div
           variants={moving}
@@ -303,9 +306,7 @@ const Modal = ({
         </motion.div>
         <motion.div
           variants={moving}
-          className=" flex-1
-        flex flex-col gap-4 p-5 rounded-lg bg-[#fcf8f5]
-        "
+          className=" flex-1 flex flex-col gap-4 p-5 rounded-lg bg-[#fcf8f5]"
         >
           <div className="flex-1 grid gap-4">
             {list.map((item: any, index: number) => {
@@ -356,11 +357,7 @@ const Modal = ({
         </motion.div>
         <motion.button
           variants={moving}
-          className="text-center bg-[#c73a0f] text-white rounded-full p-3 font-[redhat]
-        active:bg-[#9c2f0e]
-        md:hover:bg-[#9c2f0e]
-        transition duration-300
-        "
+          className="text-center bg-[#c73a0f] text-white rounded-full p-3 font-[redhat] active:bg-[#9c2f0e] md:hover:bg-[#9c2f0e] transition duration-300"
           onClick={() => {
             handle();
             reset([]);
