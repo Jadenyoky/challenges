@@ -60,7 +60,8 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(#333333, rgba(0, 0, 0, 0.502)), var(--bg) no-repeat;
+    background: linear-gradient(#333333, rgba(0, 0, 0, 0.502)),
+      var(--bg) no-repeat;
     background-size: cover;
     z-index: -1;
     border-radius: inherit;
@@ -75,11 +76,11 @@ body {
     justify-content: center;
     align-items: center;
 
-    >img {
+    > img {
       max-width: 50px;
     }
 
-    >span {
+    > span {
       color: var(--green);
       font-style: italic;
       text-shadow: 0px 0px 20px #000000;
@@ -106,14 +107,14 @@ body {
     overflow: hidden;
 
     .card {
-      >* {
+      > * {
         transition: all 0.5s;
         opacity: 0;
         transform: scale(0.5) translateX(-100%);
         font-size: 1rem;
       }
 
-      >span {
+      > span {
         position: absolute;
         top: 10px;
         left: 20px;
@@ -124,7 +125,7 @@ body {
         font-weight: bold;
       }
 
-      >.name {
+      > .name {
         position: absolute;
         left: 20px;
         bottom: 50px;
@@ -138,7 +139,7 @@ body {
         max-width: 55%;
       }
 
-      >.date {
+      > .date {
         position: absolute;
         left: 20px;
         bottom: 20px;
@@ -147,7 +148,7 @@ body {
         color: var(--green);
       }
 
-      >.days {
+      > .days {
         position: absolute;
         right: 20px;
         bottom: 20px;
@@ -160,12 +161,12 @@ body {
         flex-wrap: wrap;
         justify-content: flex-end;
 
-        >span:nth-child(2) {
+        > span:nth-child(2) {
           color: white;
         }
       }
 
-      >.highlight {
+      > .highlight {
         position: absolute;
         top: 0;
         background-color: rgba(0, 0, 0, 0.6);
@@ -174,7 +175,7 @@ body {
         z-index: 1;
       }
 
-      >img {
+      > img {
         opacity: 1;
         transform: scale(1) translateX(0);
         object-fit: cover;
@@ -182,7 +183,7 @@ body {
       }
     }
 
-    >.info {
+    > .info {
       position: absolute;
       top: 10px;
       right: 20px;
@@ -202,7 +203,7 @@ body {
       align-items: center;
       gap: 10px;
 
-      >i {
+      > i {
         margin-top: 3px;
         color: white;
       }
@@ -218,12 +219,12 @@ body {
   .challenge {
     &:hover {
       .card {
-        >* {
+        > * {
           opacity: 1;
           transform: scale(1) translateX(0);
         }
 
-        >img {
+        > img {
           transform: scale(1.5);
         }
       }
@@ -246,9 +247,9 @@ body {
   align-items: center;
   border-radius: 50%;
   z-index: 100;
-  background-color: #F6D050;
+  background-color: #f6d050;
 
-  >i {
+  > i {
     margin: 0px -4px 0 0px;
     font-size: 1.2rem;
     rotate: 180deg;
@@ -260,7 +261,7 @@ body {
     width: 70px;
     filter: drop-shadow(3px 2px 1px black);
 
-    >i {
+    > i {
       color: white;
       filter: drop-shadow(0 0 1px black);
       margin: -8px -4px -5px 0px;
@@ -275,7 +276,7 @@ body {
       width: 40px;
       filter: initial;
 
-      >i {
+      > i {
         color: initial;
         filter: initial;
         margin: 0px -4px 0 0px;
@@ -289,7 +290,7 @@ body {
       width: 70px;
       filter: drop-shadow(3px 2px 1px black);
 
-      >i {
+      > i {
         color: white;
         filter: drop-shadow(0 0 1px black);
         margin: -8px -4px -5px 0px;
@@ -300,11 +301,19 @@ body {
 }
 
 .footer {
-  background: linear-gradient(to top,
+  background: linear-gradient(
+      to top,
       rgb(37, 37, 37),
       rgba(37, 37, 37, 0.597),
-      transparent),
-    linear-gradient(to top, rgb(37, 37, 37), rgba(37, 37, 37, 0.597), transparent), var(--bg) center center / cover;
+      transparent
+    ),
+    linear-gradient(
+      to top,
+      rgb(37, 37, 37),
+      rgba(37, 37, 37, 0.597),
+      transparent
+    ),
+    var(--bg) center center / cover;
 
   padding: 10px 20px;
   display: grid;
@@ -325,13 +334,13 @@ body {
       transition: all 0.3s;
 
       &:hover {
-        color: rgb(133, 97, 7);
+        color: #f6d050;
         transform: scale(1.5);
       }
     }
   }
 
-  >p {
+  > p {
     font-size: 1rem;
     color: white;
   }
@@ -357,7 +366,7 @@ body {
     background-color: #1d1f1eab;
   }
 
-  >.modalCard {
+  > .modalCard {
     position: relative;
     padding: 20px;
     overflow: auto;
@@ -390,11 +399,11 @@ body {
         flex-wrap: wrap;
         gap: 10px;
 
-        >span {
+        > span {
           color: white;
         }
 
-        >span:nth-child(2) {
+        > span:nth-child(2) {
           color: var(--green);
         }
       }
@@ -405,19 +414,19 @@ body {
         justify-content: end;
         flex-wrap: wrap;
 
-        >span {
+        > span {
           color: white;
         }
 
-        >span:nth-child(1) {
+        > span:nth-child(1) {
           color: rgb(255, 149, 0);
         }
 
-        >span:nth-child(2) {
+        > span:nth-child(2) {
           color: rgb(98, 203, 255);
         }
 
-        >span:nth-child(3) {
+        > span:nth-child(3) {
           color: #fceb66;
         }
       }
@@ -443,7 +452,7 @@ body {
       }
     }
 
-    >.close {
+    > .close {
       position: absolute;
       top: 0;
       right: 0;
@@ -477,18 +486,18 @@ body {
     .challenge {
       &:hover {
         .card {
-          >* {
+          > * {
             opacity: 0;
             transform: initial;
           }
 
-          >img {
+          > img {
             opacity: 1;
             transform: initial;
           }
         }
 
-        >.info {
+        > .info {
           transform: initial;
         }
       }
@@ -541,7 +550,7 @@ body {
 
   .content {
     .challenge {
-      >.info {
+      > .info {
         font-size: 1rem;
       }
     }

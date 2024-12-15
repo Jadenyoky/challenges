@@ -10,6 +10,7 @@ import pic8 from "/public/assets/challenges-images/results-summary.jpg";
 import pic9 from "/public/assets/challenges-images/huddle-section.jpg";
 import pic10 from "/public/assets/challenges-images/age-calculator.jpg";
 import pic11 from "/public/assets/challenges-images/product-list.jpg";
+import pic12 from "/public/assets/challenges-images/advice-generator.jpg";
 import { StaticImageData } from "next/image";
 import moment from "moment";
 
@@ -170,6 +171,17 @@ const challenges: Challenge[] = [
     date: handleDate("12/08/2024"),
     days: handleTime("12/08/2024 13:58", "12/12/2024 21:09"),
     skills: ["html", "css", "tailwind", "react"],
+  },
+  {
+    id: 12,
+    name: "Advice generator",
+    link: "/advice-generator",
+    pic: pic12,
+    dateStart: handleDate("12/15/2024"),
+    from: handleFrom("12/15/2024 00:27"),
+    date: handleDate("12/15/2024"),
+    days: handleTime("12/15/2024 00:27", "12/15/2024 02:17"),
+    skills: ["html", "tailwind", "react"],
   },
 ];
 

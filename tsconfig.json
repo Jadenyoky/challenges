@@ -35,7 +35,7 @@
     ".next/types/**/*.ts",
     "src/app/anime.tsx",
     "src/app/social-links/page.tsx"
-  ],
+, "src/app/test-redux/slice.tsء"  ],
   "exclude": [
     "node_modules"
   ]
