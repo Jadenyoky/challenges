@@ -26,9 +26,16 @@ const Page = () => {
       opacity: 1,
     },
   };
+
   return (
     <main className="h-svh bg-[#1F2632] flex justify-center items-center">
-      <div className="rounded-3xl bg-[#323A49] h-[400px] max-h-[80%] w-[600px] max-w-[90%] overflow-auto flex gap-3 flex-col justify-around items-center p-7 font-[manrope]">
+      <div
+        className="rounded-3xl bg-[#323A49] min-h-[350px] max-h-[80%] w-[600px] max-w-[90%] relative p-7 font-[manrope]
+      
+      grid grid-rows-[0.5fr,1fr,0.7fr] place-items-center
+      gap-[20px]
+      "
+      >
         <div
           className="text-[#52FFA8] font-[600] flex
         tracking-[5px] text-sm"
@@ -48,7 +55,7 @@ const Page = () => {
           variants={moving}
           initial="initial"
           animate="animate"
-          className="text-[#CEE3E9] font-[800] text-[22px] sm:text-[28px] text-pretty text-center "
+          className="text-[#CEE3E9] font-[800] text-[22px] sm:text-[28px] text-balance text-center overflow-auto "
         >
           "{advice.slip?.advice}"
         </motion.div>
@@ -68,20 +75,21 @@ const Page = () => {
           <img
             src={"/assets/images/advice-generator/pattern-divider-desktop.svg"}
             alt="Divider"
-            className="mb-[40px]"
+            // className="mb-[40px]"
           />
         </picture>
-      </div>
-      <div
-        onClick={() => {
-          getAdvice();
-        }}
-        className="cursor-pointer absolute bottom-[19%] left-[50%] -translate-x-2/4 ml-1 bg-[#52FFA8] w-[60px] h-[60px] rounded-full flex justify-center items-center transition duration-300
+
+        <div
+          onClick={() => {
+            getAdvice();
+          }}
+          className="cursor-pointer absolute bottom-[-30px] bg-[#52FFA8] w-[60px] h-[60px] rounded-full flex justify-center items-center transition duration-300
         active:shadow-[0_0_25px] active:shadow-[#52FFA8]
       md:hover:shadow-[0_0_25px] md:hover:shadow-[#52FFA8]
       "
-      >
-        <Dice />
+        >
+          <Dice />
+        </div>
       </div>
     </main>
   );
