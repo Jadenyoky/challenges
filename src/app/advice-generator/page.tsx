@@ -30,9 +30,9 @@ const Page = () => {
   return (
     <main className="h-svh bg-[#1F2632] flex justify-center items-center">
       <div
-        className="rounded-3xl bg-[#323A49] min-h-[350px] max-h-[80%] w-[600px] max-w-[90%] relative p-7 font-[manrope]
+        className="rounded-3xl bg-[#323A49] h-[350px] max-h-[80%] w-[600px] max-w-[90%] relative p-7 font-[manrope]
       
-      grid grid-rows-[0.5fr,1fr,0.7fr] place-items-center
+      grid grid-rows-[0.3fr,1fr,0.5fr] place-items-center
       gap-[20px]
       "
       >
@@ -55,7 +55,7 @@ const Page = () => {
           variants={moving}
           initial="initial"
           animate="animate"
-          className="text-[#CEE3E9] font-[800] text-[22px] sm:text-[28px] text-balance text-center overflow-auto "
+          className="text-[#CEE3E9] font-[800] text-[23px] sm:text-[28px] text-balance text-center overflow-auto h-[100%] flex items-center justify-center"
         >
           "{advice.slip?.advice}"
         </motion.div>
