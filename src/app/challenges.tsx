@@ -11,6 +11,7 @@ import pic9 from "/public/assets/challenges-images/huddle-section.jpg";
 import pic10 from "/public/assets/challenges-images/age-calculator.jpg";
 import pic11 from "/public/assets/challenges-images/product-list.jpg";
 import pic12 from "/public/assets/challenges-images/advice-generator.jpg";
+import pic13 from "/public/assets/challenges-images/sunnyside-landing.jpg";
 import { StaticImageData } from "next/image";
 import moment from "moment";
 
@@ -181,6 +182,17 @@ const challenges: Challenge[] = [
     from: handleFrom("12/15/2024 00:27"),
     date: handleDate("12/15/2024"),
     days: handleTime("12/15/2024 00:27", "12/15/2024 02:17"),
+    skills: ["html", "tailwind", "react"],
+  },
+  {
+    id: 13,
+    name: "Sunnyside landing",
+    link: "/sunnyside-landing",
+    pic: pic13,
+    dateStart: handleDate("12/20/2024"),
+    from: handleFrom("12/20/2024 20:30"),
+    date: handleDate("12/22/2024"),
+    days: handleTime("12/20/2024 20:30", "12/22/2024 18:22"),
     skills: ["html", "tailwind", "react"],
   },
 ];
